@@ -1,0 +1,8 @@
+Transacoes: 1
+numero de Transacoes
+nome_cli1 ; nome_cli2 ; data ; titulo ; preco_medio ; numero_acoes
+
+Ex:
+Ordens de Compra
+1
+Joao ; Pedro ; 13/01/2016 ; sonae ; 12.3 ; 1000

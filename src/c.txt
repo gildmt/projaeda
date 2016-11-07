@@ -1,0 +1,5 @@
+Clientes: 1
+Gil Teixeira ; 134797891
+nome; NIF
+
+Ex:

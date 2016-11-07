@@ -1,0 +1,6 @@
+Ordens de Compra: 1
+titulo; preco_max_unidade; valor_max_gastar
+
+Ex:
+
+sonae; 12.3; 10000

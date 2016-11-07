@@ -1,0 +1,82 @@
+﻿//Data
+
+data.h
+	bool operator !=(const date& d);
+	bool operator >(const date& d);
+	bool operator <=(const date& d);
+	bool operator >=(const date& d);
+
+data.cpp
+
+bool date::operator !=(const date& d1, const date& d2) {
+	return !(d1 == d2);
+}
+
+bool date::operator >(const date& d1, const date& d2) {
+	if (d1 == d2) {
+		return false;
+	}; // this is strict inequality
+	if (d1 < d2) {
+		return false;
+	};
+	return true;
+}
+bool date::operator <=(const date& d1, const date& d2) {
+	if (d1 == d2) {
+		return true;
+	}
+	return (d1 < d2);
+}
+bool date::operator >=(const date& d1, const date& d2) {
+	if (d1 == d2) {
+		return true;
+	};
+	return (d1 > d2);
+}
+
+inline date next date(const date& d) {
+	date ndat;
+	if (!d.valid()) {return ndat;};
+	ndat=date((d.dia()+1),d.mes(),d.ano()); if (ndat.valid()) return ndat;
+	ndat=date(1,(d.mes()+1),d.ano()); if (ndat.valid()) return ndat;
+	ndat = date(1,1,(d.ano()+1)); return ndat;
+}
+
+inline date previous date(const date& d) {
+	date ndat;
+	if (!d.valid()) {return ndat;}; // return zero
+	ndat = date((d.dia()−1),d.mes(),d.ano()); if (ndat.valid()) return ndat;
+	ndat = date(31,(d.mes()−1),d.ano()); if (ndat.valid()) return ndat;
+	ndat = date(30,(d.mes()−1),d.ano()); if (ndat.valid()) return ndat;
+	ndat = date(29,(d.mes()−1),d.ano()); if (ndat.valid()) return ndat;
+	ndat = date(28,(d.mes()−1),d.ano()); if (ndat.valid()) return ndat;
+	ndat = date(31,12,(d.ano()−1)); return ndat;
+};
+
+date date::operator ++(int) { // postfix operator
+	date d = *this;
+	*this = next
+	date(d);
+	return d;
+}
+date date::operator ++() { // prefix operator
+	*this = next
+	date(*this);
+	return *this;
+}
+date date::operator −−(int) { // postfix operator, return current value
+	date d = *this;
+	*this = previous date(*this);
+	return d;
+}
+date date::operator −−() { // prefix operator, return new value
+	*this = previous date(*this);
+	return *this;
+};
+inline long long date(const date& d) {
+	if (d.valid()) {
+		return d.ano() * 10000 + d.mes() * 100 + d.dia();
+	};
+	return −1;
+}
+;
