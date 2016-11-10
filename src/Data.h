@@ -1,8 +1,8 @@
 /*
 * Data.h
 *
-*  Created on: 30/10/2016
-*      Author: gildi
+*  Created on: 17/10/2016
+*      Author: Gil Teixeira & Paulo Correia
 */
 
 #ifndef SRC_DATA_H_
@@ -11,11 +11,9 @@
 #include <iostream>
 #include <sstream>
 #include <string>
+#include <iomanip>
 
 using namespace std;
-
-
-
 
 class Data {
 private:
@@ -33,33 +31,15 @@ public:
 	void setDia(const int& d);
 	void setMes(const int& m);
 	void setAno(const int& a);
-
-
-
 	bool operator ==(const Data& d);
-
 	bool operator <(const Data& d);
-
 	friend ostream& operator <<(ostream& os, const Data& d);
-
-
-
 };
-
-
-
 
 class data_invalida {
-string erro;
+	string erro;
 public:
-data_invalida(string erro);
-friend ostream& operator <<(ostream& os, const Data& d);
+	data_invalida(string erro);
+	friend ostream& operator <<(ostream& os, const Data& d);
 };
-
-
-
-
-
-
-
 #endif /* SRC_DATA_H_ */

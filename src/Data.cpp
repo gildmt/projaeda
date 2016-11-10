@@ -1,8 +1,8 @@
 /*
 * Data.c
 *
-*  Created on: 30/10/2016
-*      Author: gildi
+*  Created on: 17/10/2016
+*      Author: Gil Teixeira & Paulo Correia
 */
 
 #include "Data.h"
@@ -107,8 +107,10 @@ bool Data::operator <(const Data& d) {
 }
 
 ostream & operator <<(ostream& os, const Data& d) {
-
-os << d.dia << "/" << d.mes << "/" << d.ano;
-return os;
+	os << setfill('0') << setw(2) << right << d.dia << "/"
+		<< setw(2) << d.mes << "/"
+		<< setw(4) << d.ano;
+	os << setfill(' ') << left;
+	return os;
 }
 

@@ -1,8 +1,8 @@
 /*
 * Utils.h
 *
-*  Created on: 31/10/2016
-*      Author: gildi
+*  Created on: 17/10/2016
+*      Author: Gil Teixeira & Paulo Correia
 */
 
 #ifndef SRC_UTILS_H_
@@ -14,19 +14,29 @@
 
 #define TAB_BIG "          "
 #define TAB    "   "
+#define BARRA    "|"
 
 #include <iostream>
 #include <sstream>
+
+#include "Data.h"
+
+#undef max
 
 using namespace std;
 
 
 
 void clearScreen();
+void linha();
 
-int le_num();
+long le_num();
 
 int leInteiro(int min, int max);
 
+long leNif();
 
+string leTitulo();
+
+void espera_input();
 #endif /* SRC_UTILS_H_ */

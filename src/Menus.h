@@ -1,4 +1,12 @@
-#pragma once
+/*
+* Excecoes.h
+*
+*  Created on: 17/10/2016
+*      Author: Gil Teixeira & Paulo Correia
+*/
+
+#ifndef SRC_MENUS_H_
+#define SRC_MENUS_H_
 
 #include <iostream>
 #include <fstream>
@@ -20,18 +28,4 @@ int infoInicial(string & fichClientes, string & fichTransacoes, string & fichOrd
 void opcoesIniciais(Bolsa & bolsa_de_valores);
 
 
-
-
-
-
-//apagar
-/*
-void opcoesGestaoClientes(VendeMaisMais & supermercado);
-void listarClientesOrdemAlfabetica(VendeMaisMais & supermercado);
-
-void listarProdutos(VendeMaisMais & supermercado);
-
-void opcoesGestaoTransacoes(VendeMaisMais & supermercado);
-
-void opcoesRecomendacao(VendeMaisMais & supermercado);
-*/
+#endif /* SRC_MENUS_H_ */

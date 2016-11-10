@@ -2,7 +2,7 @@
  * OrdemVenda.h
  *
  *  Created on: 17/10/2016
- *      Author: Pedro
+ *      Author: Gil Teixeira & Paulo Correia
  */
 
 #ifndef ORDEMVENDA_H_
@@ -21,7 +21,7 @@ private:
 	float precoMin;
 public:
 
-	OrdemVenda(string titulo, Data data, Cliente* cliente, int quantidade, float precoMin);
+	OrdemVenda(string titulo, Data data, long nif_cliente, int quantidade, float precoMin);
 
 	float getPrecoMin() const {
 		return precoMin;

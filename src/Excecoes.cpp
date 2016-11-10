@@ -1,8 +1,8 @@
 /*
 * Excecoes.c
 *
-*  Created on: 30/10/2016
-*      Author: gildi
+*  Created on: 17/10/2016
+*      Author: Gil Teixeira & Paulo Correia
 */
 
 #include "Excecoes.h"

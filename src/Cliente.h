@@ -2,7 +2,7 @@
  * Cliente.h
  *
  *  Created on: 17/10/2016
- *      Author: Pedro
+ *      Author: Gil Teixeira & Paulo Correia
  */
 
 #ifndef CLIENTE_H_
@@ -30,6 +30,7 @@ public:
 	int getNif();
 	void setNome(string nome);
 	void setNif(long NIF);
+	bool operator<(const Cliente &cl) const;
 };
 
 

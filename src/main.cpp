@@ -2,13 +2,14 @@
  * main.cpp
  *
  *  Created on: 17/10/2016
- *      Author: Pedro
+ *      Author: Gil Teixeira & Paulo Correia
  */
 
 #include "Bolsa.h"
 #include "Data.h"
 #include "Menus.h"
 #include <iostream>
+#include <fstream> 
 #include <string>
 #include <vector>
 
@@ -34,8 +35,6 @@ int main(){
 
 	// cria bolsa
 	Bolsa bolsa_de_valores;
-
-
 	
 	//le ficheiros
 	bolsa_de_valores.le_ficheiros(fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra);

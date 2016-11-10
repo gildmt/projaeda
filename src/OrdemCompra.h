@@ -2,7 +2,7 @@
  * OrdemCompra.h
  *
  *  Created on: 17/10/2016
- *      Author: Pedro
+ *      Author: Gil Teixeira & Paulo Correia
  */
 
 #ifndef ORDEMCOMPRA_H_
@@ -21,7 +21,7 @@ private:
 	float valorMaxGastar;
 public:
 
-	OrdemCompra(string titulo, Data data, Cliente* cliente, float precoMax, float valorMaxGastar);
+	OrdemCompra(string titulo, Data data, long nif_cliente, float precoMax, float valorMaxGastar);
 
 	float getPrecoMax() const {
 		return precoMax;

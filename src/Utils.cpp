@@ -2,7 +2,7 @@
 * Ordens.cpp
 *
 *  Created on: 17/10/2016
-*      Author: Pedro
+*      Author: Gil Teixeira & Paulo Correia
 */
 
 
@@ -29,18 +29,27 @@ void clearScreen() {
 	SetConsoleCursorPosition(hCon, upperLeftCorner);
 }
 
+void linha()
+{
+	cout << TAB;
+	for (int i = 1; i < 43; i++)
+		cout << "--";
 
-int le_num()
+	cout << "\n";
+}
+
+
+long le_num()
 {
 	string input;
-	int num;
+	long num;
 
 	getline(cin, input);
 	stringstream ss(input);
 
 	while (!(ss >> num  && ss.eof())) {
-		cout << "Input invalido" << endl;
-		cout << "Introduza um numero valido: ";
+		cout << TAB << "Input invalido" << endl;
+		cout << TAB << "Introduza um numero valido: ";
 		getline(cin, input);
 		ss.str("");	ss.clear(); //apagar conteudo da stringsstream
 		ss << input;
@@ -53,9 +62,56 @@ int leInteiro(int min, int max){
 
 	while (num < min || num > max)
 	{
-		cout << "\nInput Invalido. Introduza um numero entre " << min << " e " << max << " : ";
+		cout << endl;
+		cout << TAB << "Input Invalido. Introduza um numero entre " << min << " e " << max << " : ";
 		num = le_num();
 	}
 	return num;
 
+}
+
+long leNif() {
+	string input;
+	long num;
+
+	getline(cin, input);
+	stringstream ss(input);
+
+	if (!(ss >> num  && ss.eof())) {
+		cout << endl;
+		cout << TAB << "Input invalido" << endl;
+		return -1;
+	}
+
+	if (num >= 0 && num <= 999999999)
+		return num;
+	return -1;
+}
+
+string leTitulo() {
+	string input;
+	string titulo;
+
+	getline(cin, input);
+	stringstream ss(input);
+
+	if (!(ss >> titulo  && ss.eof())) {
+		cout << endl;
+		cout << TAB << "Input invalido" << endl;
+		return "";
+	}
+
+	return titulo;
+}
+
+void espera_input()
+{
+	cout << endl;
+	cout << TAB << "Pressione Enter para continuar.";
+	cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	//cin.clear();
+	//cin.ignore(numeric_limits<streamsize>::max(), '\n');
+	//string s;
+	//getline(cin, s);
+	//_getch;
 }

@@ -1,8 +1,8 @@
 /*
 * Excecoes.h
 *
-*  Created on: 30/10/2016
-*      Author: gildi
+ *  Created on: 17/10/2016
+ *      Author: Gil Teixeira & Paulo Correia
 */
 
 #ifndef SRC_EXCECOES_H_

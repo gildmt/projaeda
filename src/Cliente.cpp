@@ -2,7 +2,7 @@
  * Clientes.cpp
  *
  *  Created on: 17/10/2016
- *      Author: Pedro
+ *      Author: Gil Teixeira & Paulo Correia
  */
 #include "Cliente.h"
 
@@ -18,6 +18,7 @@ Cliente::Cliente(ifstream & in){
 	long nif_aux;
 	getline(in, nome_aux, ';'); nome_aux.erase(nome_aux.end() - 1); //apaga ultimo espaco
 	in >> nif_aux;
+	in.ignore(1);
 	nome = nome_aux;
 	nif = nif_aux;
 
@@ -41,6 +42,9 @@ void Cliente::setNif(long nif){
 	this->nome = nome;
 }
 
+bool Cliente::operator<(const Cliente &cl) const {
+	return nome < cl.nome;
+}
 
 
 

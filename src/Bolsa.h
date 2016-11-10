@@ -2,7 +2,7 @@
  * Bolsa.h
  *
  *  Created on: 17/10/2016
- *      Author: Pedro
+ *      Author: Gil Teixeira & Paulo Correia
  */
 
 #ifndef BOLSA_H_
@@ -11,9 +11,11 @@
 #include <iostream>
 #include <vector>
 #include <fstream>
+#include <iomanip>
 #include "OrdemVenda.h"
 #include "OrdemCompra.h"
 #include "Cliente.h"
+#include "Utils.h"
 #include "Transacao.h"
 
 using namespace std;
@@ -48,6 +50,8 @@ public:
 
 	void setOrdensVenda(const vector<OrdemVenda>& ordensVenda);
 
+	//funcoes leitura ficheiro
+
 	void le_ficheiros(string & fichClientes, string & fichTransacoes, string & fichOrdensVenda, string & fichOrdensCompra);
 	void le_ficheiros_cli(string & fichClientes);
 	void le_ficheiros_tran(string & fichTransacoes);
@@ -55,7 +59,7 @@ public:
 	void le_ficheiros_ordc(string & fichOrdensCompra);
 
 
-
+	//funcoes Meunu
 
 	void guarda_alteracoes(string & fichClientes, string & fichTransacoes, string & fichOrdensVenda, string & fichOrdensCompra);
 	void ad_ordem_compra();
@@ -63,8 +67,8 @@ public:
 	void ad_cli();
 	void listar_transacoes_cli();
 	void listar_transacoes_titulo();
-	void listar_transacoes_dia();
 	void listar_transacoes_intervalo_de_tempo();
+	void listar_clientes();
 
 
 	//outras func

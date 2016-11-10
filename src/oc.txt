@@ -1,6 +1,10 @@
-Ordens de Compra: 1
-titulo; preco_max_unidade; valor_max_gastar
+Ordens de Compra: 2
+342456789 ; 14/03/2019 ; ederp ; 1332.3 ; 100.43
+123456789 ; 13/03/2019 ; edp ; 132.3 ; 15400.34
+
+
+nif ; data ; titulo ; preco_max_unidade ; valor_max_gastar
 
 Ex:
 
-sonae; 12.3; 10000
+123456789 ; 12/02/1998 ; sonae; 12.3; 10000

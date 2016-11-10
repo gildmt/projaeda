@@ -2,7 +2,7 @@
  * Ordens.h
  *
  *  Created on: 17/10/2016
- *      Author: Pedro
+ *      Author: Gil Teixeira & Paulo Correia
  */
 
 #ifndef ORDEM_H_
@@ -19,10 +19,10 @@ class Ordem {
 private:
 	string titulo;
 	Data data;
-	Cliente* cliente;
+	long nif_cliente;
 public:
 
-	Ordem(string titulo, Data data, Cliente* cli);
+	Ordem(string titulo, Data data, long nif_cliente);
 
 	const string& getTitulo() const {
 		return titulo;
