@@ -6,7 +6,7 @@
  */
 #include "Cliente.h"
 
-Cliente::Cliente(string nome, int nif) {
+Cliente::Cliente(string nome, long nif) {
 	this->nome=nome;
 	this->nif=nif;
 }

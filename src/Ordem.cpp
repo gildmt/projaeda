@@ -16,4 +16,11 @@ Ordem::Ordem(string titulo, Data data, long nif_cliente) {
 	this->nif_cliente = nif_cliente;
 }
 
+long Ordem::getNif() {
+	return nif_cliente;
+}
+
+Data Ordem::getData() {
+	return data;
+}
 

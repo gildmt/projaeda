@@ -45,7 +45,7 @@ int main(){
 
 	//guarda alteracoes
 	bolsa_de_valores.guarda_alteracoes(fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra);
-
+	
 	return 0;
 }
 

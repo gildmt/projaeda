@@ -57,6 +57,24 @@ long le_num()
 	return num;
 }
 
+float le_float()
+{
+	string input;
+	float num;
+
+	getline(cin, input);
+	stringstream ss(input);
+
+	while (!(ss >> num  && ss.eof())) {
+		cout << TAB << "Input invalido" << endl;
+		cout << TAB << "Introduza um numero valido: ";
+		getline(cin, input);
+		ss.str("");	ss.clear(); //apagar conteudo da stringsstream
+		ss << input;
+	}
+	return num;
+}
+
 int leInteiro(int min, int max){
 	int num = le_num();
 
@@ -114,4 +132,14 @@ void espera_input()
 	//string s;
 	//getline(cin, s);
 	//_getch;
+}
+
+Data getData() {
+	time_t t = time(0); 
+	struct tm now;
+	Data actual;
+	localtime_s(&now, &t);
+	actual = Data(now.tm_mday, (now.tm_mon + 1), (now.tm_year + 1900));
+
+	return actual;
 }

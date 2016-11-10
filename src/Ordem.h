@@ -31,8 +31,8 @@ public:
 	void setTitulo(const string& titulo) {
 		this->titulo = titulo;
 	}
-
-	
+	long getNif();
+	Data getData();
 };
 
 

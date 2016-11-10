@@ -9,7 +9,12 @@
 
 
 Transacao::Transacao(string titulo, float preco_acao, int num_acoes, Data data, long cliente_v, long cliente_c){
-
+	this->titulo = titulo;
+	this->preco_acao = preco_acao;
+	this->num_acoes = num_acoes;
+	this->data = data;
+	this->nif_cliente_c = cliente_c;
+	this->nif_cliente_v = cliente_v;
 }
 
 Transacao::Transacao(ifstream & in){
@@ -36,9 +41,6 @@ Transacao::Transacao(ifstream & in){
 	data = Data(data_str);
 	nif_cliente_v = nif1_aux;
 	nif_cliente_c = nif_aux2;
-
-
-
 }
 
 

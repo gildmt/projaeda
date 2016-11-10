@@ -160,12 +160,150 @@ void Bolsa::guarda_alteracoes(string & fichClientes, string & fichTransacoes, st
 
 
 void Bolsa::ad_ordem_compra(){
+	string titulo;
+	long nif;
 
+	cout << endl << endl;
+	cout << TAB << "NIF do cliente: ";
+	nif = leNif();
+	
+	if (nif == -1) {
+		espera_input();
+		return;
+	}
 
+	for (size_t i = 0; i < clientes.size(); i++) {
+		if (nif == clientes.at(i).getNif()) {
+			cout << TAB << "Titulo da acao: ";
+			titulo = leTitulo();
+
+			if (titulo.empty()) {
+				espera_input();
+				return;
+			}
+			
+			float pMax, vMaxGastar;
+			cout << TAB << "Preco maximo por acao: ";
+			pMax = le_float();
+			
+			cout << TAB << "Valor Maximo a Gastar: ";
+			vMaxGastar = le_float();
+
+			Data data = getData();
+
+			for (size_t j = 0; j < ordensVenda.size(); j++) {
+				if (ordensVenda.at(j).getTitulo() == titulo) {
+					if (ordensVenda.at(j).getPrecoMin() <= pMax) {
+						if (ordensVenda.at(j).getPrecoMin() * ordensVenda.at(j).getQuantidade() <= vMaxGastar) {
+							Transacao t(titulo, ordensVenda.at(j).getPrecoMin(), ordensVenda.at(j).getQuantidade(), data, ordensVenda.at(i).getNif(), clientes.at(i).getNif());
+							transacoes.push_back(t);
+							vMaxGastar = vMaxGastar - ordensVenda.at(j).getPrecoMin() * ordensVenda.at(j).getQuantidade();
+							cout << TAB << "Comprou " << ordensVenda.at(j).getQuantidade() << " acoes a " << ordensVenda.at(j).getPrecoMin() << " euros cada uma." << endl;
+							ordensVenda.erase(ordensVenda.begin() + j);
+							espera_input();
+						}
+						else if (ordensVenda.at(j).getPrecoMin() * ordensVenda.at(j).getQuantidade() > vMaxGastar) {
+							int nQuantidade = floor(vMaxGastar / ordensVenda.at(j).getPrecoMin() + 0.5);
+							Transacao t(titulo, ordensVenda.at(j).getPrecoMin(), nQuantidade, data, ordensVenda.at(i).getNif(), clientes.at(i).getNif());
+							transacoes.push_back(t);
+							OrdemVenda actualizada(titulo, ordensVenda.at(j).getData(), ordensVenda.at(j).getNif(), ordensVenda.at(j).getQuantidade() - nQuantidade, ordensVenda.at(j).getPrecoMin());
+							ordensVenda.push_back(actualizada);
+							cout << TAB << "Comprou " << nQuantidade << " acoes a " << ordensVenda.at(j).getPrecoMin() << " euros cada uma." << endl;
+							ordensVenda.erase(ordensVenda.begin() + j);		
+							espera_input();
+							return;
+						}
+					}
+				}
+			}
+
+			if (vMaxGastar == 0)
+				return;
+
+			OrdemCompra oc(titulo, data, nif, pMax, vMaxGastar);
+			ordensCompra.push_back(oc);
+			cout << TAB << "Nenhuma ordem de venda compativel encontrada, ordem de compra listada." << endl;
+			espera_input();
+			return;
+		}
+	}
+	cout << TAB << "Nao existe um cliente com esse NIF (adicione cliente)\n";
+	espera_input();
+	return;
 }
 
 void Bolsa::ad_ordem_venda(){
+	string titulo;
+	long nif;
 
+	cout << endl << endl;
+	cout << TAB << "NIF do cliente: ";
+	nif = leNif();
+
+	if (nif == -1) {
+		espera_input();
+		return;
+	}
+
+	for (size_t i = 0; i < clientes.size(); i++) {
+		if (nif == clientes.at(i).getNif()) {
+			cout << TAB << "Titulo da acao: ";
+			titulo = leTitulo();
+
+			if (titulo.empty()) {
+				espera_input();
+				return;
+			}
+
+			float pMin;
+			int qtd;
+			cout << TAB << "Preco minimo por acao: ";
+			pMin = le_float();
+
+			cout << TAB << "Quantidade de acoes: ";
+			qtd = leInteiro(0, 999999);
+
+			Data data = getData();
+
+			for (size_t j = 0; j < ordensCompra.size(); j++) {
+				if (ordensCompra.at(j).getTitulo() == titulo) {
+					if (ordensCompra.at(j).getPrecoMax() >= pMin) {
+						if (pMin * qtd <= ordensCompra.at(j).getValorMaxGastar()) {
+							Transacao t(titulo, pMin, qtd, data, clientes.at(i).getNif(), ordensCompra.at(j).getNif());
+							transacoes.push_back(t);
+							OrdemCompra actualizada(titulo, ordensCompra.at(j).getData(), ordensCompra.at(j).getNif(), ordensCompra.at(j).getPrecoMax(), ordensCompra.at(j).getValorMaxGastar() - qtd * pMin);
+							ordensCompra.push_back(actualizada);
+							cout << TAB << "Vendeu " << qtd << " acoes a " << pMin << " euros cada uma." << endl;
+							ordensCompra.erase(ordensCompra.begin() + j);
+							espera_input();
+							return;
+						}
+						else if (pMin * qtd > ordensCompra.at(j).getValorMaxGastar()) {
+							int nQuantidade = floor(ordensCompra.at(j).getValorMaxGastar() / pMin + 0.5);
+							Transacao t(titulo, pMin, nQuantidade, data, clientes.at(i).getNif(), ordensCompra.at(j).getNif());
+							transacoes.push_back(t);
+							cout << TAB << "Vendeu " << nQuantidade << " acoes a " << pMin << " euros cada uma." << endl;
+							ordensCompra.erase(ordensCompra.begin() + j);
+							qtd = qtd - nQuantidade;
+							espera_input();
+						}
+					}
+				}
+			}
+
+			if (qtd == 0)
+				return;
+
+			OrdemVenda ov(titulo, data, nif, qtd, pMin);
+			ordensVenda.push_back(ov);
+			cout << TAB << "Nenhuma ordem de compra compativel encontrada, ordem de venda listada." << endl;
+			espera_input();
+			return;
+		}
+	}
+	cout << TAB << "Nao existe um cliente com esse NIF (adicione cliente)\n";
+	espera_input();
+	return;
 }
 
 void Bolsa::ad_cli(){
@@ -174,7 +312,12 @@ void Bolsa::ad_cli(){
 
 	cout << endl << endl;
 	cout << TAB << "Nome do cliente: ";
-	getline(cin, nome);
+	nome = leTitulo();
+
+	if (nome.empty()) {
+		espera_input();
+		return;
+	}
 
 	cout << TAB << "NIF do cliente: ";
 	nif = leNif();
@@ -187,13 +330,14 @@ void Bolsa::ad_cli(){
 	for (size_t i = 0; i<clientes.size(); i++)
 		if (nif == clientes.at(i).getNif())
 		{
-			cout << "Ja existe um cliente com esse NIF\n";
+			cout << TAB << "Ja existe um cliente com esse NIF\n";
 			espera_input();
 			return;
 		}
 
 		clientes.push_back(Cliente(nome, nif));
 }
+
 void Bolsa::listar_transacoes_cli(){
 	long nif;
 

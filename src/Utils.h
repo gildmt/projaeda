@@ -32,6 +32,8 @@ void linha();
 
 long le_num();
 
+float le_float();
+
 int leInteiro(int min, int max);
 
 long leNif();
@@ -39,4 +41,6 @@ long leNif();
 string leTitulo();
 
 void espera_input();
+
+Data getData();
 #endif /* SRC_UTILS_H_ */

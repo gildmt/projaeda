@@ -23,7 +23,7 @@ private:
 	long nif;
 
 public:
-	Cliente(string nome, int NIF);
+	Cliente(string nome, long NIF);
 	Cliente();
 	Cliente(ifstream & in); //le linha de ficheiro
 	string getNome();
