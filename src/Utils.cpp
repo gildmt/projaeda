@@ -5,9 +5,7 @@
 *      Author: Gil Teixeira & Paulo Correia
 */
 
-
 #include "Utils.h"
-
 
 void clearScreen() {
 

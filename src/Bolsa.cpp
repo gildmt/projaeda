@@ -7,8 +7,6 @@
 
 
 #include "Bolsa.h"
-#include "insertionSort.h"
-
 
 const vector<Cliente>& Bolsa::getClientes() const {
 	return clientes;
@@ -42,7 +40,7 @@ void Bolsa::le_ficheiros_cli(string & fichClientes){
 	int num_cli;
 	ifstream f_clientes;
 
-	f_clientes.open(fichClientes);
+	f_clientes.open(fichClientes, std::fstream::in | std::fstream::out | std::fstream::app);
 	getline(f_clientes, aux, ':');  //retira Clientes, nao interesasa
 	f_clientes >> num_cli; f_clientes.ignore(); //retira num de iteracoes
 	
@@ -61,7 +59,7 @@ void Bolsa::le_ficheiros_tran(string & fichTransacoes){
 	int num_tran;
 	ifstream f_transacoes;
 
-	f_transacoes.open(fichTransacoes);
+	f_transacoes.open(fichTransacoes, std::fstream::in | std::fstream::out | std::fstream::app);
 	getline(f_transacoes, aux, ':');  //retira "Transacoes", nao interesasa
 	f_transacoes >> num_tran; f_transacoes.ignore(); //retira num de iteracoes
 
@@ -80,7 +78,7 @@ void Bolsa::le_ficheiros_ordv(string & fichOrdensVenda){
 	int num_ov;
 	ifstream f_OrdensVenda;
 
-	f_OrdensVenda.open(fichOrdensVenda);
+	f_OrdensVenda.open(fichOrdensVenda, std::fstream::in | std::fstream::out | std::fstream::app);
 	getline(f_OrdensVenda, aux, ':');  //retira "Ordens de Venda", nao interesasa
 	f_OrdensVenda >> num_ov; f_OrdensVenda.ignore(); //retira num de iteracoes
 
@@ -116,7 +114,7 @@ void Bolsa::le_ficheiros_ordc(string & fichOrdensCompra){
 	int num_oc;
 	ifstream f_OrdensCompra;
 
-	f_OrdensCompra.open(fichOrdensCompra);
+	f_OrdensCompra.open(fichOrdensCompra, std::fstream::in | std::fstream::out | std::fstream::app);
 	getline(f_OrdensCompra, aux, ':');  //retira "Ordens de Compra", nao interesasa
 	f_OrdensCompra >> num_oc; f_OrdensCompra.ignore(); //retira num de iteracoes
 
@@ -154,58 +152,62 @@ void Bolsa::le_ficheiros(string & fichClientes, string & fichTransacoes, string 
 	le_ficheiros_ordc(fichOrdensCompra);
 }
 
-void Bolsa::guarda_alteracoes(string & fichClientes, string & fichTransacoes, string & fichOrdensVenda, string & fichOrdensCompra){
-	ofstream fich, fich2;
+void Bolsa::guarda_alteracoes(int n, string & fileToChange){
+	ofstream fich;
 
-	//guarda clientes
-	fich.open(fichClientes);
-	fich2.open("test25.txt");
-	cout << fichClientes;
+	if (n < 1 || n > 4)
+		return;
 
-	fich << "Clientes: " << clientes.size() << endl;
+	switch (n) {
+	case 1:
+		//guarda clientes
+		fich.open(fileToChange);
 
-	for (size_t i = 0; i < clientes.size(); i++)
-	{
-		clientes.at(i).guardar(fich);
+		fich << "Clientes: " << clientes.size() << endl;
+
+		for (size_t i = 0; i < clientes.size(); i++)
+		{
+			clientes.at(i).guardar(fich);
+		}
+		fich.close();
+		break;
+	case 2:
+		//guarda transacoes
+		fich.open(fileToChange);
+
+		fich << "Transacoes: " << transacoes.size() << endl;
+
+		for (size_t i = 0; i < transacoes.size(); i++)
+		{
+			transacoes.at(i).guardar(fich);
+		}
+		fich.close();
+		break;
+	case 3:
+		//guarda ordens de venda	
+		fich.open(fileToChange);
+
+		fich << "Ordens de Venda: " << ordensVenda.size() << endl;
+
+		for (size_t i = 0; i < ordensVenda.size(); i++)
+		{
+			ordensVenda.at(i).guardar(fich);
+		}
+		fich.close();
+		break;
+	case 4:
+		//guarda ordens de compra	
+		fich.open(fileToChange);
+
+		fich << "Ordens de Compra: " << ordensCompra.size() << endl;
+
+		for (size_t i = 0; i < ordensCompra.size(); i++)
+		{
+			ordensCompra.at(i).guardar(fich);
+		}
+		fich.close();
+		break;
 	}
-	fich.close();
-	fich2.close();
-
-
-	//guarda transacoes
-	fich.open(fichTransacoes);
-
-	fich << "Transacoes: " << transacoes.size() << endl;
-
-	for (size_t i = 0; i < transacoes.size(); i++)
-	{
-		transacoes.at(i).guardar(fich);
-	}
-	fich.close();
-
-
-	//guarda ordens de venda	
-	fich.open(fichOrdensVenda);
-
-	fich << "Ordens de Venda: " << ordensVenda.size() << endl;
-
-	for (size_t i = 0; i < ordensVenda.size(); i++)
-	{
-		ordensVenda.at(i).guardar(fich);
-	}
-	fich.close();
-
-
-	//guarda ordens de compra	
-	fich.open(fichOrdensCompra);
-	
-	fich << "Ordens de Compra: " << ordensCompra.size() << endl;
-
-	for (size_t i = 0; i < ordensCompra.size(); i++)
-	{
-		ordensCompra.at(i).guardar(fich);
-	}
-	fich.close();
 }
 
 
@@ -264,6 +266,8 @@ void Bolsa::ad_ordem_compra(){
 							cout << TAB << "Comprou " << nQuantidade << " acoes a " << ordensVenda.at(j).getPrecoMin() << " euros cada uma." << endl;
 							ordensVenda.erase(ordensVenda.begin() + j);		
 							espera_input();
+							guarda_alteracoes(2, fichTransacoes);
+							guarda_alteracoes(3, fichOrdensVenda);
 							return;
 						}
 					}
@@ -273,6 +277,7 @@ void Bolsa::ad_ordem_compra(){
 			if (vMaxGastar == 0)
 			{
 				espera_input();
+				guarda_alteracoes(2, fichTransacoes);
 				return;
 			}
 
@@ -283,6 +288,8 @@ void Bolsa::ad_ordem_compra(){
 			else
 				cout << TAB << "Nenhuma ordem de venda compativel encontrada, ordem de compra listada." << endl;
 			espera_input();
+			guarda_alteracoes(2, fichTransacoes);
+			guarda_alteracoes(4, fichOrdensCompra);
 			return;
 		}
 	}
@@ -336,6 +343,8 @@ void Bolsa::ad_ordem_venda(){
 							cout << TAB << "Vendeu " << qtd << " acoes a " << pMin << " euros cada uma." << endl;
 							ordensCompra.erase(ordensCompra.begin() + j);
 							espera_input();
+							guarda_alteracoes(4, fichOrdensCompra);
+							guarda_alteracoes(2, fichTransacoes);
 							return;
 						}
 						else if (pMin * qtd > ordensCompra.at(j).getValorMaxGastar()) {
@@ -355,6 +364,7 @@ void Bolsa::ad_ordem_venda(){
 			if (qtd == 0)
 			{
 				espera_input();
+				guarda_alteracoes(2, fichTransacoes);
 				return;
 			}
 
@@ -365,6 +375,8 @@ void Bolsa::ad_ordem_venda(){
 			else
 				cout << TAB << "Nenhuma ordem de compra compativel encontrada, ordem de venda listada." << endl;
 			espera_input();
+			guarda_alteracoes(2, fichTransacoes);
+			guarda_alteracoes(3, fichOrdensVenda);
 			return;
 		}
 	}
@@ -379,9 +391,10 @@ void Bolsa::ad_cli(){
 
 	cout << endl << endl;
 	cout << TAB << "Nome do cliente: ";
-	nome = leTitulo();
+	std::getline(std::cin, nome);
 
 	if (nome.empty()) {
+		cout << TAB << "Input invalido.";
 		espera_input();
 		return;
 	}
@@ -403,6 +416,8 @@ void Bolsa::ad_cli(){
 		}
 
 		clientes.push_back(Cliente(nome, nif));
+		insertionSort(clientes);
+		guarda_alteracoes(1, fichClientes);
 }
 
 void Bolsa::listar_transacoes_cli(){

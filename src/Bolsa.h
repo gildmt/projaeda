@@ -17,6 +17,7 @@
 #include "Cliente.h"
 #include "Utils.h"
 #include "Transacao.h"
+#include "insertionSort.h"
 
 using namespace std;
 
@@ -61,7 +62,7 @@ public:
 
 	//funcoes Meunu
 
-	void guarda_alteracoes(string & fichClientes, string & fichTransacoes, string & fichOrdensVenda, string & fichOrdensCompra);
+	void guarda_alteracoes(int n, string & fich);
 	void ad_ordem_compra();
 	void ad_ordem_venda();
 	void ad_cli();

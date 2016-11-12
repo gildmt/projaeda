@@ -17,8 +17,9 @@
 #define BARRA    "|"
 
 #include <iostream>
-#include <fstream>
-#include <sstream>
+#include <fstream> 
+#include <string>
+#include <vector>
 
 #include "Data.h"
 
@@ -26,7 +27,7 @@
 
 using namespace std;
 
-
+extern string fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra;
 
 void clearScreen();
 void linha(int n);
