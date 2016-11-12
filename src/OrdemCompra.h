@@ -9,6 +9,7 @@
 #define ORDEMCOMPRA_H_
 
 #include "Ordem.h"
+#include "Utils.h"
 
 #include <string>
 #include <iostream>
@@ -38,6 +39,9 @@ public:
 	void setValorMaxGastar(float valorMaxGastar) {
 		this->valorMaxGastar = valorMaxGastar;
 	}
+
+	void guardar(ofstream & out) const;
+	friend ostream& operator<<(ostream& out, const OrdemCompra & ordem);
 };
 
 

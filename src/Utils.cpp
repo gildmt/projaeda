@@ -29,10 +29,10 @@ void clearScreen() {
 	SetConsoleCursorPosition(hCon, upperLeftCorner);
 }
 
-void linha()
+void linha(int n)
 {
 	cout << TAB;
-	for (int i = 1; i < 43; i++)
+	for (int i = 1; i < n; i++)
 		cout << "--";
 
 	cout << "\n";
@@ -143,3 +143,19 @@ Data getData() {
 
 	return actual;
 }
+
+bool fich_vazio(fstream& pFile)
+{
+	return pFile.peek() == fstream::traits_type::eof();
+}
+
+void acabatxt(string &str)
+{
+	string sufixo = ".txt";
+	if (str.size() < sufixo.size())
+		str = str + sufixo;
+
+	if (str.compare(str.size() - sufixo.size(), sufixo.size(), sufixo) != 0)
+		str = str + sufixo;
+}
+

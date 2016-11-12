@@ -7,11 +7,14 @@
 #include "Cliente.h"
 
 Cliente::Cliente(string nome, long nif) {
-	this->nome=nome;
-	this->nif=nif;
+	this->nome = nome;
+	this->nif = nif;
 }
 
-Cliente::Cliente(){};
+Cliente::Cliente()
+{
+
+};
 
 Cliente::Cliente(ifstream & in){
 	string nome_aux;
@@ -21,8 +24,6 @@ Cliente::Cliente(ifstream & in){
 	in.ignore(1);
 	nome = nome_aux;
 	nif = nif_aux;
-
-
 }
 
 string Cliente::getNome(){
@@ -31,7 +32,6 @@ string Cliente::getNome(){
 }
 int Cliente::getNif(){
 	return nif;
-
 }
 
 void Cliente::setNome(string nome){
@@ -48,5 +48,8 @@ bool Cliente::operator<(const Cliente &cl) const {
 
 
 
-
+void Cliente::guardar(ofstream & out) const{
+	out << nome << " ; "
+		<< nif << endl;
+}
 

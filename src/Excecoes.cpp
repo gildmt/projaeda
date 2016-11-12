@@ -14,8 +14,9 @@ FicheiroInexistente::FicheiroInexistente(string tipo_fich){
 
 
 ostream& operator<< (ostream& out, const FicheiroInexistente & fich_inex){
-	out << "\n Esse ficheiro nao existe." << endl << "Introduza o nome de um ficheiro de " 
-		<< fich_inex.tipo_fich << " existente(ou control+z para sair): ";
+	out << "\nEsse ficheiro nao existe." << endl 
+		<< "Sera criado um ficheiro de " 
+		<< fich_inex.tipo_fich << " com esse nome.\n";
 	return out;
 }
 
@@ -25,7 +26,7 @@ FicheiroInvalido::FicheiroInvalido(string tipo_fich){
 
 
 ostream& operator<< (ostream& out, const FicheiroInvalido & fich_inva){
-	out << "\n Esse ficheiro e invalido." << endl << "Introduza o nome de um ficheiro de " 
+	out << "\nEsse ficheiro e invalido." << endl << "Introduza o nome de um ficheiro de " 
 		<< fich_inva.tipo_fich << " valido(ou control+z para sair): ";
 	return out;
 }

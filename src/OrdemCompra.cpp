@@ -13,3 +13,22 @@ OrdemCompra::OrdemCompra(string titulo, Data data, long nif_cliente, float preco
 }
 
 
+void OrdemCompra::guardar(ofstream & out) const{
+	out << nif_cliente << " ; "
+		<< data << " ; "
+		<< titulo << " ; "
+		<< precoMax << " ; "
+		<< valorMaxGastar << endl;
+
+}
+
+ostream& operator<<(ostream& out, const OrdemCompra & ordem)
+{
+	out << TAB << BARRA << " " << right << setfill('0') << setw(9) << ordem.nif_cliente << setfill(' ') << left
+		<< " " << BARRA << " " << setw(12) << ordem.data << " " << BARRA
+		<< " " << setw(13) << ordem.titulo << " " << BARRA
+		<< " " << right << setw(12) << ordem.precoMax << " " << BARRA
+		<< " " << setw(12) << ordem.valorMaxGastar << " " << BARRA << endl;
+	
+	return out;
+}

@@ -155,13 +155,64 @@ void Bolsa::le_ficheiros(string & fichClientes, string & fichTransacoes, string 
 }
 
 void Bolsa::guarda_alteracoes(string & fichClientes, string & fichTransacoes, string & fichOrdensVenda, string & fichOrdensCompra){
+	ofstream fich, fich2;
 
+	//guarda clientes
+	fich.open(fichClientes);
+	fich2.open("test25.txt");
+	cout << fichClientes;
+
+	fich << "Clientes: " << clientes.size() << endl;
+
+	for (size_t i = 0; i < clientes.size(); i++)
+	{
+		clientes.at(i).guardar(fich);
+	}
+	fich.close();
+	fich2.close();
+
+
+	//guarda transacoes
+	fich.open(fichTransacoes);
+
+	fich << "Transacoes: " << transacoes.size() << endl;
+
+	for (size_t i = 0; i < transacoes.size(); i++)
+	{
+		transacoes.at(i).guardar(fich);
+	}
+	fich.close();
+
+
+	//guarda ordens de venda	
+	fich.open(fichOrdensVenda);
+
+	fich << "Ordens de Venda: " << ordensVenda.size() << endl;
+
+	for (size_t i = 0; i < ordensVenda.size(); i++)
+	{
+		ordensVenda.at(i).guardar(fich);
+	}
+	fich.close();
+
+
+	//guarda ordens de compra	
+	fich.open(fichOrdensCompra);
+	
+	fich << "Ordens de Compra: " << ordensCompra.size() << endl;
+
+	for (size_t i = 0; i < ordensCompra.size(); i++)
+	{
+		ordensCompra.at(i).guardar(fich);
+	}
+	fich.close();
 }
 
 
 void Bolsa::ad_ordem_compra(){
 	string titulo;
 	long nif;
+	int trans = 0;
 
 	cout << endl << endl;
 	cout << TAB << "NIF do cliente: ";
@@ -195,16 +246,18 @@ void Bolsa::ad_ordem_compra(){
 				if (ordensVenda.at(j).getTitulo() == titulo) {
 					if (ordensVenda.at(j).getPrecoMin() <= pMax) {
 						if (ordensVenda.at(j).getPrecoMin() * ordensVenda.at(j).getQuantidade() <= vMaxGastar) {
-							Transacao t(titulo, ordensVenda.at(j).getPrecoMin(), ordensVenda.at(j).getQuantidade(), data, ordensVenda.at(i).getNif(), clientes.at(i).getNif());
+							Transacao t(titulo, ordensVenda.at(j).getPrecoMin(), ordensVenda.at(j).getQuantidade(), data, ordensVenda.at(j).getNif(), clientes.at(i).getNif());
 							transacoes.push_back(t);
 							vMaxGastar = vMaxGastar - ordensVenda.at(j).getPrecoMin() * ordensVenda.at(j).getQuantidade();
 							cout << TAB << "Comprou " << ordensVenda.at(j).getQuantidade() << " acoes a " << ordensVenda.at(j).getPrecoMin() << " euros cada uma." << endl;
 							ordensVenda.erase(ordensVenda.begin() + j);
-							espera_input();
+							j--;
+							trans = 1;
 						}
 						else if (ordensVenda.at(j).getPrecoMin() * ordensVenda.at(j).getQuantidade() > vMaxGastar) {
-							int nQuantidade = floor(vMaxGastar / ordensVenda.at(j).getPrecoMin() + 0.5);
-							Transacao t(titulo, ordensVenda.at(j).getPrecoMin(), nQuantidade, data, ordensVenda.at(i).getNif(), clientes.at(i).getNif());
+							float nQuantidade = vMaxGastar / ordensVenda.at(j).getPrecoMin();
+							int n = (int)nQuantidade;
+							Transacao t(titulo, ordensVenda.at(j).getPrecoMin(), n, data, ordensVenda.at(j).getNif(), clientes.at(i).getNif());
 							transacoes.push_back(t);
 							OrdemVenda actualizada(titulo, ordensVenda.at(j).getData(), ordensVenda.at(j).getNif(), ordensVenda.at(j).getQuantidade() - nQuantidade, ordensVenda.at(j).getPrecoMin());
 							ordensVenda.push_back(actualizada);
@@ -218,11 +271,17 @@ void Bolsa::ad_ordem_compra(){
 			}
 
 			if (vMaxGastar == 0)
+			{
+				espera_input();
 				return;
+			}
 
 			OrdemCompra oc(titulo, data, nif, pMax, vMaxGastar);
 			ordensCompra.push_back(oc);
-			cout << TAB << "Nenhuma ordem de venda compativel encontrada, ordem de compra listada." << endl;
+			if(trans)
+				cout << TAB << "Ordem de compra nao satisfeita totalmente, ordem de compra listada." << endl;
+			else
+				cout << TAB << "Nenhuma ordem de venda compativel encontrada, ordem de compra listada." << endl;
 			espera_input();
 			return;
 		}
@@ -235,6 +294,7 @@ void Bolsa::ad_ordem_compra(){
 void Bolsa::ad_ordem_venda(){
 	string titulo;
 	long nif;
+	int trans = 0;
 
 	cout << endl << endl;
 	cout << TAB << "NIF do cliente: ";
@@ -284,19 +344,26 @@ void Bolsa::ad_ordem_venda(){
 							transacoes.push_back(t);
 							cout << TAB << "Vendeu " << nQuantidade << " acoes a " << pMin << " euros cada uma." << endl;
 							ordensCompra.erase(ordensCompra.begin() + j);
+							j--;
 							qtd = qtd - nQuantidade;
-							espera_input();
+							trans = 1;
 						}
 					}
 				}
 			}
 
 			if (qtd == 0)
+			{
+				espera_input();
 				return;
+			}
 
 			OrdemVenda ov(titulo, data, nif, qtd, pMin);
 			ordensVenda.push_back(ov);
-			cout << TAB << "Nenhuma ordem de compra compativel encontrada, ordem de venda listada." << endl;
+			if(trans)
+				cout << TAB << "Ordem de venda nao satisfeita totalmente, ordem de venda listada." << endl;
+			else
+				cout << TAB << "Nenhuma ordem de compra compativel encontrada, ordem de venda listada." << endl;
 			espera_input();
 			return;
 		}
@@ -365,7 +432,7 @@ void Bolsa::listar_transacoes_cli(){
 
 	clearScreen();
 	cout << endl;
-	linha();
+	linha(43);
 	cout << TAB << left << BARRA
 		<< setw(11) << " Comprador " << BARRA
 		<< setw(11) << " Vendedor " << BARRA
@@ -374,13 +441,13 @@ void Bolsa::listar_transacoes_cli(){
 		<< setw(14) << " Preco medio " << BARRA
 		<< setw(14) << " Numero acoes" << BARRA
 		<< endl;
-	linha();
+	linha(43);
 
 	for (size_t i = primeiro_cli; i < transacoes.size(); i++)
 		if (nif == transacoes.at(i).getCliente_v() || nif == transacoes.at(i).getCliente_c())
 			cout << transacoes.at(i);
 
-	linha();
+	linha(43);
 	cout << endl << endl;
 
 	espera_input();
@@ -413,7 +480,7 @@ void Bolsa::listar_transacoes_titulo(){
 
 	clearScreen();
 	cout << endl;
-	linha();
+	linha(43);
 	cout << TAB << left << BARRA
 		<< setw(11) << " Comprador " << BARRA
 		<< setw(11) << " Vendedor " << BARRA
@@ -422,13 +489,13 @@ void Bolsa::listar_transacoes_titulo(){
 		<< setw(14) << " Preco medio " << BARRA
 		<< setw(14) << " Numero acoes" << BARRA
 		<< endl;
-	linha();
+	linha(43);
 
 	for (size_t i = primeiro_cli; i < transacoes.size(); i++)
 		if (titulo == transacoes.at(i).getTitulo())
 			cout << transacoes.at(i);
 
-	linha();
+	linha(43);
 	cout << endl << endl;
 
 	espera_input();
@@ -474,7 +541,7 @@ void Bolsa::listar_transacoes_intervalo_de_tempo() {
 
 		clearScreen();
 		cout << endl;
-		linha();
+		linha(43);
 		cout << TAB << left << BARRA
 			<< setw(11) << " Comprador " << BARRA
 			<< setw(11) << " Vendedor " << BARRA
@@ -483,7 +550,7 @@ void Bolsa::listar_transacoes_intervalo_de_tempo() {
 			<< setw(14) << " Preco medio " << BARRA
 			<< setw(14) << " Numero acoes" << BARRA
 			<< endl;
-		linha();
+		linha(43);
 
 		for (size_t i = primeiro_cli; i < transacoes.size(); i++)
 			if (dia == transacoes.at(i).getData().getDia()
@@ -491,7 +558,7 @@ void Bolsa::listar_transacoes_intervalo_de_tempo() {
 				&& ano == transacoes.at(i).getData().getAno())
 				cout << transacoes.at(i);
 
-		linha();
+		linha(43);
 		cout << endl << endl;
 
 		espera_input();
@@ -518,7 +585,7 @@ void Bolsa::listar_transacoes_intervalo_de_tempo() {
 
 		clearScreen();
 		cout << endl;
-		linha();
+		linha(43);
 		cout << TAB << left << BARRA
 			<< setw(11) << " Comprador " << BARRA
 			<< setw(11) << " Vendedor " << BARRA
@@ -527,14 +594,14 @@ void Bolsa::listar_transacoes_intervalo_de_tempo() {
 			<< setw(14) << " Preco medio " << BARRA
 			<< setw(14) << " Numero acoes" << BARRA
 			<< endl;
-		linha();
+		linha(43);
 
 		for (size_t i = primeiro_cli; i < transacoes.size(); i++)
 			if (mes == transacoes.at(i).getData().getMes()
 				&& ano == transacoes.at(i).getData().getAno())
 				cout << transacoes.at(i);
 
-		linha();
+		linha(43);
 		cout << endl << endl;
 
 		espera_input();
@@ -558,7 +625,7 @@ void Bolsa::listar_transacoes_intervalo_de_tempo() {
 
 		clearScreen();
 		cout << endl;
-		linha();
+		linha(43);
 		cout << TAB << left << BARRA
 			<< setw(11) << " Comprador " << BARRA
 			<< setw(11) << " Vendedor " << BARRA
@@ -567,13 +634,13 @@ void Bolsa::listar_transacoes_intervalo_de_tempo() {
 			<< setw(14) << " Preco medio " << BARRA
 			<< setw(14) << " Numero acoes" << BARRA
 			<< endl;
-		linha();
+		linha(43);
 
 		for (size_t i = primeiro_cli; i < transacoes.size(); i++)
 			if (ano == transacoes.at(i).getData().getAno())
 				cout << transacoes.at(i);
 
-		linha();
+		linha(43);
 		cout << endl << endl;
 
 		espera_input();
@@ -597,7 +664,51 @@ void Bolsa::listar_clientes() {
 	return;
 }
 
+void Bolsa::listar_ordensVenda()
+{
+	clearScreen();
+	cout << endl;
+	linha(36);
+	cout << TAB << left << BARRA
+		<< setw(11) << " Vendedor " << BARRA
+		<< setw(12) << " Data" << BARRA
+		<< setw(15) << " Titulo" << BARRA
+		<< setw(14) << " Preco minimo " << BARRA
+		<< setw(12) << " Quantidade " << BARRA
+		<< endl;
+	linha(36);
 
+	for (size_t i = 0; i < ordensVenda.size(); i++)
+		cout << ordensVenda.at(i);
+	
+	linha(36);
+	cout << endl << endl;
+
+	espera_input();
+}
+
+void Bolsa::listar_ordensCompra()
+{
+	clearScreen();
+	cout << endl;
+	linha(37);
+	cout << TAB << left << BARRA
+		<< setw(11) << " Vendedor " << BARRA
+		<< setw(12) << " Data" << BARRA
+		<< setw(15) << " Titulo" << BARRA
+		<< setw(14) << " Preco maximo " << BARRA
+		<< setw(14) << " Valor Maximo " << BARRA
+		<< endl;
+	linha(37);
+
+	for (size_t i = 0; i < ordensCompra.size(); i++)
+		cout << ordensCompra.at(i);
+
+	linha(37);
+	cout << endl << endl;
+
+	espera_input();
+}
 
 int Bolsa::pos_vec_cli(string nome_cli){
 	for (size_t i = 0; i < clientes.size(); i++)

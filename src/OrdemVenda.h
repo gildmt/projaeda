@@ -9,6 +9,7 @@
 #define ORDEMVENDA_H_
 
 #include "Ordem.h"
+#include "Utils.h"
 
 #include <string>
 #include <iostream>
@@ -38,6 +39,8 @@ public:
 	void setQuantidade(int quantidade) {
 		this->quantidade = quantidade;
 	}
+	void guardar(ofstream & out) const;
+	friend ostream& operator<<(ostream& out, const OrdemVenda & ordem);
 };
 
 

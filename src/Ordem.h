@@ -16,7 +16,7 @@
 using namespace std;
 
 class Ordem {
-private:
+protected:
 	string titulo;
 	Data data;
 	long nif_cliente;

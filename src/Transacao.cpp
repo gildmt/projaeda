@@ -7,7 +7,6 @@
 
 #include "Transacao.h"
 
-
 Transacao::Transacao(string titulo, float preco_acao, int num_acoes, Data data, long cliente_v, long cliente_c){
 	this->titulo = titulo;
 	this->preco_acao = preco_acao;
@@ -66,8 +65,7 @@ bool Transacao::operator<(const Transacao &tr) const {
 
 ostream& operator<< (ostream& out, const Transacao & transacao){
 	out << TAB << BARRA << " " << right << setfill('0') << setw(9) << transacao.nif_cliente_c << " " << BARRA
-		<< " " << right << setw(9) << transacao.nif_cliente_v << " " << BARRA
-		<< setfill(' ') << left
+		<< " " << right << setw(9) << transacao.nif_cliente_v << " " << BARRA << setfill(' ') << left
 		<< " " << setw(12) << transacao.data << " "<< BARRA
 		<< " " << setw(13) << transacao.titulo << " " << BARRA
 		<< " " << right << setprecision(2) << fixed << setw(12) << transacao.preco_acao << " " << BARRA
@@ -94,4 +92,14 @@ int Transacao::getNum_acoes() {
 }
 Data Transacao::getData() {
 	return data;
+}
+
+void Transacao::guardar(ofstream & out) const{
+	out << nif_cliente_v << " ; "
+		<< nif_cliente_c << " ; "
+		<< data << " ; "
+		<< titulo << " ; "
+		<< preco_acao << " ; "
+		<< num_acoes << endl;
+
 }

@@ -21,11 +21,13 @@
 
 using namespace std;
 
-int verfica_fich(string fich_veri, string tipo_fich);
+int verfica_fich(string & fich_veri, string tipo_fich);
 
 int infoInicial(string & fichClientes, string & fichTransacoes, string & fichOrdensVenda, string & fichOrdensCompra);
 
 void opcoesIniciais(Bolsa & bolsa_de_valores);
+
+void menuTransacoes(Bolsa & bolsa_de_valores);
 
 
 #endif /* SRC_MENUS_H_ */

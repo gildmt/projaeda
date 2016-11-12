@@ -34,6 +34,7 @@ public:
 	Data getData();
 	long getCliente_v();
 	long getCliente_c();
+	void guardar(ofstream & out) const;
 };
 
 

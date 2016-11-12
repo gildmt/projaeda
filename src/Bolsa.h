@@ -69,6 +69,8 @@ public:
 	void listar_transacoes_titulo();
 	void listar_transacoes_intervalo_de_tempo();
 	void listar_clientes();
+	void listar_ordensVenda();
+	void listar_ordensCompra();
 
 
 	//outras func

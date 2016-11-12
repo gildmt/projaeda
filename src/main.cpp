@@ -8,6 +8,7 @@
 #include "Bolsa.h"
 #include "Data.h"
 #include "Menus.h"
+#include "Utils.h"
 #include <iostream>
 #include <fstream> 
 #include <string>
@@ -18,14 +19,12 @@
 
 using namespace std;
 
-
+string fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra;
 
 int main(){
-	string fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra;
-
 	//v final
 	//if (infoInicial(fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra))
-	//	return 1;
+		//return 1;
 
 	//v para testes
 	fichClientes = "c.txt";

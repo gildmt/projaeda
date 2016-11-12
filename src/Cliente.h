@@ -31,6 +31,7 @@ public:
 	void setNome(string nome);
 	void setNif(long NIF);
 	bool operator<(const Cliente &cl) const;
+	void guardar(ofstream & out) const;
 };
 
 

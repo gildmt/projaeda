@@ -17,6 +17,7 @@
 #define BARRA    "|"
 
 #include <iostream>
+#include <fstream>
 #include <sstream>
 
 #include "Data.h"
@@ -28,7 +29,7 @@ using namespace std;
 
 
 void clearScreen();
-void linha();
+void linha(int n);
 
 long le_num();
 
@@ -43,4 +44,8 @@ string leTitulo();
 void espera_input();
 
 Data getData();
+
+bool fich_vazio(fstream& pFile);
+void acabatxt(string &str);
+
 #endif /* SRC_UTILS_H_ */
