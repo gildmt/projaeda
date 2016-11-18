@@ -1,0 +1,178 @@
+\hypertarget{class_cliente}{}\section{Cliente Class Reference}
+\label{class_cliente}\index{Cliente@{Cliente}}
+
+
+Classe que guarda o nome e o nif do cliente e as funcoes para manipulacao da mesma.  
+
+
+
+
+{\ttfamily \#include $<$Cliente.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_cliente_a14240898329d14688bb7e2e2709db710}{Cliente} (string nome, long N\+IF)
+\begin{DoxyCompactList}\small\item\em Constructor do \hyperlink{class_cliente}{Cliente} que aceita o nome e o N\+IF como parametros. \end{DoxyCompactList}\item 
+\hyperlink{class_cliente_ab6a372f412692c12c4be4427b00a3f6e}{Cliente} ()
+\begin{DoxyCompactList}\small\item\em Construtor por defeito. \end{DoxyCompactList}\item 
+\hyperlink{class_cliente_a6ea9b20d8340c4f6df9bb6a79e828ccc}{Cliente} (ifstream \&in)
+\begin{DoxyCompactList}\small\item\em Constructor que le uma linha de um ficheiro. \end{DoxyCompactList}\item 
+string \hyperlink{class_cliente_ac9662059b96002d423e33cb6827b37f1}{get\+Nome} ()
+\begin{DoxyCompactList}\small\item\em Retorna o nome do \hyperlink{class_cliente}{Cliente}. \end{DoxyCompactList}\item 
+int \hyperlink{class_cliente_a243d3f408b70d3ab6466dfa32b9f40a6}{get\+Nif} ()
+\begin{DoxyCompactList}\small\item\em Retorna o N\+IF do \hyperlink{class_cliente}{Cliente}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cliente_a383af20fa7ace06d4f04fe26e82e0ca2}{set\+Nome} (string nome)
+\begin{DoxyCompactList}\small\item\em Define o nome do \hyperlink{class_cliente}{Cliente}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cliente_a8d729975d853d8f4a0123906655b5e73}{set\+Nif} (long N\+IF)
+\begin{DoxyCompactList}\small\item\em Define o N\+IF do \hyperlink{class_cliente}{Cliente}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_cliente_a093309873c9b1514786650e03a50247e}{operator$<$} (const \hyperlink{class_cliente}{Cliente} \&cl) const
+\begin{DoxyCompactList}\small\item\em Operador de comparacao \char`\"{}menor que\char`\"{}. \end{DoxyCompactList}\item 
+void \hyperlink{class_cliente_ad1f4557a02cedb762de957cb18e97dd5}{guardar} (ofstream \&out) const
+\begin{DoxyCompactList}\small\item\em Escreve no ficheiro de texto na forma \char`\"{}nome ; nif\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que guarda o nome e o nif do cliente e as funcoes para manipulacao da mesma. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_cliente_a14240898329d14688bb7e2e2709db710}{}\label{class_cliente_a14240898329d14688bb7e2e2709db710} 
+\index{Cliente@{Cliente}!Cliente@{Cliente}}
+\index{Cliente@{Cliente}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{Cliente()}{Cliente()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Cliente\+::\+Cliente (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{long}]{N\+IF }\end{DoxyParamCaption})}
+
+
+
+Constructor do \hyperlink{class_cliente}{Cliente} que aceita o nome e o N\+IF como parametros. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & The nome. \\
+\hline
+{\em N\+IF} & The nif. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_cliente_ab6a372f412692c12c4be4427b00a3f6e}{}\label{class_cliente_ab6a372f412692c12c4be4427b00a3f6e} 
+\index{Cliente@{Cliente}!Cliente@{Cliente}}
+\index{Cliente@{Cliente}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{Cliente()}{Cliente()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Cliente\+::\+Cliente (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor por defeito. 
+
+\hypertarget{class_cliente_a6ea9b20d8340c4f6df9bb6a79e828ccc}{}\label{class_cliente_a6ea9b20d8340c4f6df9bb6a79e828ccc} 
+\index{Cliente@{Cliente}!Cliente@{Cliente}}
+\index{Cliente@{Cliente}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{Cliente()}{Cliente()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Cliente\+::\+Cliente (\begin{DoxyParamCaption}\item[{ifstream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Constructor que le uma linha de um ficheiro. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Ficheiro de Clientes. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_cliente_a243d3f408b70d3ab6466dfa32b9f40a6}{}\label{class_cliente_a243d3f408b70d3ab6466dfa32b9f40a6} 
+\index{Cliente@{Cliente}!get\+Nif@{get\+Nif}}
+\index{get\+Nif@{get\+Nif}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{get\+Nif()}{getNif()}}
+{\footnotesize\ttfamily int Cliente\+::get\+Nif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o N\+IF do \hyperlink{class_cliente}{Cliente}. 
+
+\begin{DoxyReturn}{Returns}
+O N\+IF do \hyperlink{class_cliente}{Cliente}. 
+\end{DoxyReturn}
+\hypertarget{class_cliente_ac9662059b96002d423e33cb6827b37f1}{}\label{class_cliente_ac9662059b96002d423e33cb6827b37f1} 
+\index{Cliente@{Cliente}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{get\+Nome()}{getNome()}}
+{\footnotesize\ttfamily string Cliente\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o nome do \hyperlink{class_cliente}{Cliente}. 
+
+\begin{DoxyReturn}{Returns}
+O Nome do \hyperlink{class_cliente}{Cliente}. 
+\end{DoxyReturn}
+\hypertarget{class_cliente_ad1f4557a02cedb762de957cb18e97dd5}{}\label{class_cliente_ad1f4557a02cedb762de957cb18e97dd5} 
+\index{Cliente@{Cliente}!guardar@{guardar}}
+\index{guardar@{guardar}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{guardar()}{guardar()}}
+{\footnotesize\ttfamily void Cliente\+::guardar (\begin{DoxyParamCaption}\item[{ofstream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Escreve no ficheiro de texto na forma \char`\"{}nome ; nif\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & O Ficheiro de texto em que se escreve. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_cliente_a093309873c9b1514786650e03a50247e}{}\label{class_cliente_a093309873c9b1514786650e03a50247e} 
+\index{Cliente@{Cliente}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Cliente\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_cliente}{Cliente} \&}]{cl }\end{DoxyParamCaption}) const}
+
+
+
+Operador de comparacao \char`\"{}menor que\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em cl} & O \hyperlink{class_cliente}{Cliente} com que se compara.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True se o primeiro parametro for menor que o segundo. False se maior ou igual. 
+\end{DoxyReturn}
+\hypertarget{class_cliente_a8d729975d853d8f4a0123906655b5e73}{}\label{class_cliente_a8d729975d853d8f4a0123906655b5e73} 
+\index{Cliente@{Cliente}!set\+Nif@{set\+Nif}}
+\index{set\+Nif@{set\+Nif}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{set\+Nif()}{setNif()}}
+{\footnotesize\ttfamily void Cliente\+::set\+Nif (\begin{DoxyParamCaption}\item[{long}]{N\+IF }\end{DoxyParamCaption})}
+
+
+
+Define o N\+IF do \hyperlink{class_cliente}{Cliente}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em N\+IF} & O N\+IF do \hyperlink{class_cliente}{Cliente}. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_cliente_a383af20fa7ace06d4f04fe26e82e0ca2}{}\label{class_cliente_a383af20fa7ace06d4f04fe26e82e0ca2} 
+\index{Cliente@{Cliente}!set\+Nome@{set\+Nome}}
+\index{set\+Nome@{set\+Nome}!Cliente@{Cliente}}
+\subsubsection{\texorpdfstring{set\+Nome()}{setNome()}}
+{\footnotesize\ttfamily void Cliente\+::set\+Nome (\begin{DoxyParamCaption}\item[{string}]{nome }\end{DoxyParamCaption})}
+
+
+
+Define o nome do \hyperlink{class_cliente}{Cliente}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em nome} & O nome do \hyperlink{class_cliente}{Cliente}. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_cliente_8h}{Cliente.\+h}\item 
+\hyperlink{_cliente_8cpp}{Cliente.\+cpp}\end{DoxyCompactItemize}

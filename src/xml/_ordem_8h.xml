@@ -1,0 +1,186 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="_ordem_8h" kind="file" language="C++">
+    <compoundname>Ordem.h</compoundname>
+    <includes local="no">string</includes>
+    <includes local="no">iostream</includes>
+    <includes refid="_cliente_8h" local="yes">Cliente.h</includes>
+    <includes refid="_data_8h" local="yes">Data.h</includes>
+    <includedby refid="_ordem_venda_8h" local="yes">OrdemVenda.h</includedby>
+    <includedby refid="_ordem_compra_8h" local="yes">OrdemCompra.h</includedby>
+    <includedby refid="_ordem_8cpp" local="yes">Ordem.cpp</includedby>
+    <incdepgraph>
+      <node id="190">
+        <label>iomanip</label>
+      </node>
+      <node id="188">
+        <label>Data.h</label>
+        <link refid="_data_8h"/>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="189" relation="include">
+        </childnode>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="190" relation="include">
+        </childnode>
+      </node>
+      <node id="184">
+        <label>string</label>
+      </node>
+      <node id="187">
+        <label>fstream</label>
+      </node>
+      <node id="186">
+        <label>Cliente.h</label>
+        <link refid="_cliente_8h"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="187" relation="include">
+        </childnode>
+      </node>
+      <node id="183">
+        <label>Ordem.h</label>
+        <link refid="_ordem_8h"/>
+        <childnode refid="184" relation="include">
+        </childnode>
+        <childnode refid="185" relation="include">
+        </childnode>
+        <childnode refid="186" relation="include">
+        </childnode>
+        <childnode refid="188" relation="include">
+        </childnode>
+      </node>
+      <node id="189">
+        <label>sstream</label>
+      </node>
+      <node id="185">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="199">
+        <label>OrdemCompra.h</label>
+        <link refid="_ordem_compra_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="200" relation="include">
+        </childnode>
+      </node>
+      <node id="201">
+        <label>Ordem.cpp</label>
+        <link refid="_ordem_8cpp"/>
+      </node>
+      <node id="192">
+        <label>OrdemVenda.h</label>
+        <link refid="_ordem_venda_8h"/>
+        <childnode refid="193" relation="include">
+        </childnode>
+        <childnode refid="198" relation="include">
+        </childnode>
+      </node>
+      <node id="198">
+        <label>OrdemVenda.cpp</label>
+        <link refid="_ordem_venda_8cpp"/>
+      </node>
+      <node id="193">
+        <label>Bolsa.h</label>
+        <link refid="_bolsa_8h"/>
+        <childnode refid="194" relation="include">
+        </childnode>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="196" relation="include">
+        </childnode>
+      </node>
+      <node id="196">
+        <label>Menus.h</label>
+        <link refid="_menus_8h"/>
+        <childnode refid="195" relation="include">
+        </childnode>
+        <childnode refid="197" relation="include">
+        </childnode>
+      </node>
+      <node id="194">
+        <label>Bolsa.cpp</label>
+        <link refid="_bolsa_8cpp"/>
+      </node>
+      <node id="191">
+        <label>Ordem.h</label>
+        <link refid="_ordem_8h"/>
+        <childnode refid="192" relation="include">
+        </childnode>
+        <childnode refid="199" relation="include">
+        </childnode>
+        <childnode refid="201" relation="include">
+        </childnode>
+      </node>
+      <node id="195">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="197">
+        <label>Menus.cpp</label>
+        <link refid="_menus_8cpp"/>
+      </node>
+      <node id="200">
+        <label>OrdemCompra.cpp</label>
+        <link refid="_ordem_compra_8cpp"/>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_ordem" prot="public">Ordem</innerclass>
+    <innernamespace refid="namespacestd">std</innernamespace>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Ordens.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>17/10/2016</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Gil<sp/>Teixeira<sp/>&amp;<sp/>Paulo<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>ORDEM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>ORDEM_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_cliente_8h" kindref="compound">Cliente.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_data_8h" kindref="compound">Data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="22"><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="23"><highlight class="normal"></highlight></codeline>
+<codeline lineno="30" refid="class_ordem" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_ordem" kindref="compound">Ordem</ref><sp/>{</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"></highlight><highlight class="keyword">protected</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="33" refid="class_ordem_1a0773861bd9fb956d5ec62f2ef1de658b" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_ordem_1a0773861bd9fb956d5ec62f2ef1de658b" kindref="member">titulo</ref>;</highlight></codeline>
+<codeline lineno="35" refid="class_ordem_1a9f4dbc2966e98dcbd7e300ae346d8535" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data" kindref="compound">Data</ref><sp/><ref refid="class_ordem_1a9f4dbc2966e98dcbd7e300ae346d8535" kindref="member">data</ref>;</highlight></codeline>
+<codeline lineno="37" refid="class_ordem_1af6d06b4250735ae531bdcef5fa332f02" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_ordem_1af6d06b4250735ae531bdcef5fa332f02" kindref="member">nif_cliente</ref>;</highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="50"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_ordem" kindref="compound">Ordem</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>titulo,<sp/><ref refid="class_data" kindref="compound">Data</ref><sp/>data,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nif_cliente);</highlight></codeline>
+<codeline lineno="51"><highlight class="normal"></highlight></codeline>
+<codeline lineno="60" refid="class_ordem_1a1382c1e817af7abe07b66be2f3cf4e8d" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/><ref refid="class_ordem_1a1382c1e817af7abe07b66be2f3cf4e8d" kindref="member">getTitulo</ref>()</highlight><highlight class="keyword"><sp/>const<sp/></highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="61"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>titulo;</highlight></codeline>
+<codeline lineno="62"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="63"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72" refid="class_ordem_1aa8e4bc7713526fe31d8129465e7ff72a" refkind="member"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ordem_1aa8e4bc7713526fe31d8129465e7ff72a" kindref="member">setTitulo</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal">&amp;<sp/>titulo)<sp/>{</highlight></codeline>
+<codeline lineno="73"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>this-&gt;titulo<sp/>=<sp/>titulo;</highlight></codeline>
+<codeline lineno="74"><highlight class="normal"><sp/><sp/><sp/><sp/>}</highlight></codeline>
+<codeline lineno="75"><highlight class="normal"></highlight></codeline>
+<codeline lineno="84"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>getNif();</highlight></codeline>
+<codeline lineno="85"><highlight class="normal"></highlight></codeline>
+<codeline lineno="94"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data" kindref="compound">Data</ref><sp/><ref refid="_utils_8cpp_1a2df60dc042161d582a43a28edf252e75" kindref="member">getData</ref>();</highlight></codeline>
+<codeline lineno="95"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="96"><highlight class="normal"></highlight></codeline>
+<codeline lineno="97"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"></highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="100"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>ORDEM_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="Ordem.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="_ordem_venda_8cpp" kind="file" language="C++">
+    <compoundname>OrdemVenda.cpp</compoundname>
+    <includes refid="_ordem_venda_8h" local="yes">OrdemVenda.h</includes>
+    <incdepgraph>
+      <node id="244">
+        <label>iomanip</label>
+      </node>
+      <node id="246">
+        <label>windows.h</label>
+      </node>
+      <node id="242">
+        <label>Data.h</label>
+        <link refid="_data_8h"/>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="243" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="244" relation="include">
+        </childnode>
+      </node>
+      <node id="238">
+        <label>string</label>
+      </node>
+      <node id="241">
+        <label>fstream</label>
+      </node>
+      <node id="236">
+        <label>OrdemVenda.h</label>
+        <link refid="_ordem_venda_8h"/>
+        <childnode refid="237" relation="include">
+        </childnode>
+        <childnode refid="245" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+      </node>
+      <node id="235">
+        <label>OrdemVenda.cpp</label>
+        <link refid="_ordem_venda_8cpp"/>
+        <childnode refid="236" relation="include">
+        </childnode>
+      </node>
+      <node id="240">
+        <label>Cliente.h</label>
+        <link refid="_cliente_8h"/>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+      </node>
+      <node id="247">
+        <label>vector</label>
+      </node>
+      <node id="245">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="246" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="241" relation="include">
+        </childnode>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="247" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="237">
+        <label>Ordem.h</label>
+        <link refid="_ordem_8h"/>
+        <childnode refid="238" relation="include">
+        </childnode>
+        <childnode refid="239" relation="include">
+        </childnode>
+        <childnode refid="240" relation="include">
+        </childnode>
+        <childnode refid="242" relation="include">
+        </childnode>
+      </node>
+      <node id="243">
+        <label>sstream</label>
+      </node>
+      <node id="239">
+        <label>iostream</label>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_ordem_venda_8cpp_1a7034bd580be00194addb3334dfeb41f7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;out, const OrdemVenda &amp;ordem)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_ordem_venda" kindref="compound">OrdemVenda</ref> &amp;</type>
+          <declname>ordem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemVenda.cpp" line="25" column="1" bodyfile="OrdemVenda.cpp" bodystart="25" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>OrdemVenda.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>17/10/2016</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Gil<sp/>Teixeira<sp/>&amp;<sp/>Paulo<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ordem_venda_8h" kindref="compound">OrdemVenda.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="class_ordem_venda_1a90290893a4a714fa7e1b15801a00a452" kindref="member">OrdemVenda::OrdemVenda</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>titulo,<sp/><ref refid="class_data" kindref="compound">Data</ref><sp/>data,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nif_cliente,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>quantidade,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>precoMin)<sp/>:<sp/><ref refid="class_ordem" kindref="compound">Ordem</ref>(titulo,<sp/>data,<sp/>nif_cliente)<sp/>{</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;quantidade=quantidade;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;precoMin=precoMin;</highlight></codeline>
+<codeline lineno="14"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ordem_venda_1a3d6f78188308caac122209e68287e09f" kindref="member">OrdemVenda::guardar</ref>(ofstream<sp/>&amp;<sp/>out)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/><ref refid="class_ordem_1af6d06b4250735ae531bdcef5fa332f02" kindref="member">nif_cliente</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><ref refid="class_ordem_1a9f4dbc2966e98dcbd7e300ae346d8535" kindref="member">data</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><ref refid="class_ordem_1a0773861bd9fb956d5ec62f2ef1de658b" kindref="member">titulo</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>precoMin<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>quantidade<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">ostream&amp;<sp/><ref refid="class_ordem_compra_1af2f3323b475ba777c890c63648d24e5d" kindref="member">operator&lt;&lt;</ref>(ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_ordem_venda" kindref="compound">OrdemVenda</ref><sp/>&amp;<sp/>ordem)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1ad58a1fbfc85c7e4790fc55e654f50221" kindref="member">TAB</ref><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>right<sp/>&lt;&lt;<sp/>setfill(</highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>setw(9)<sp/>&lt;&lt;<sp/>ordem.<ref refid="class_ordem_1af6d06b4250735ae531bdcef5fa332f02" kindref="member">nif_cliente</ref><sp/>&lt;&lt;<sp/>setfill(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>left</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(12)<sp/>&lt;&lt;<sp/>ordem.<ref refid="class_ordem_1a9f4dbc2966e98dcbd7e300ae346d8535" kindref="member">data</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(13)<sp/>&lt;&lt;<sp/>ordem.<ref refid="class_ordem_1a0773861bd9fb956d5ec62f2ef1de658b" kindref="member">titulo</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>right<sp/>&lt;&lt;<sp/>setw(12)<sp/>&lt;&lt;<sp/>ordem.precoMin<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(10)<sp/>&lt;&lt;<sp/>ordem.quantidade<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="OrdemVenda.cpp"/>
+  </compounddef>
+</doxygen>

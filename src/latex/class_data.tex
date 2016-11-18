@@ -1,0 +1,255 @@
+\hypertarget{class_data}{}\section{Data Class Reference}
+\label{class_data}\index{Data@{Data}}
+
+
+Classe que guarda o dia, mes e ano e as funcoes para manipulacao da mesma.  
+
+
+
+
+{\ttfamily \#include $<$Data.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_data_ab19ff9142aad6f03e1a8be8284d9e8fa}{Data} (int d, int m, int a)
+\begin{DoxyCompactList}\small\item\em Construtor que aceita o dia, mes e ano. \end{DoxyCompactList}\item 
+\hyperlink{class_data_af11f741cb7f587e2e495452a8905a22a}{Data} ()
+\begin{DoxyCompactList}\small\item\em Construtor por defeito. \end{DoxyCompactList}\item 
+\hyperlink{class_data_aeddc16ade8663cd89c17624b80a67d4f}{Data} (string data\+\_\+str)
+\begin{DoxyCompactList}\small\item\em Constructor que converte string na forma \char`\"{}dd/mm/ano\char`\"{} para \hyperlink{class_data}{Data}. \end{DoxyCompactList}\item 
+bool \hyperlink{class_data_af16b870e20e2993ad585a01407efb8d5}{valida} (void) const
+\begin{DoxyCompactList}\small\item\em Verifica se a data e valida. \end{DoxyCompactList}\item 
+int \hyperlink{class_data_aa9b7bdc683d9c493d903184e85f1e6b3}{get\+Dia} () const
+\begin{DoxyCompactList}\small\item\em Retorna o dia. \end{DoxyCompactList}\item 
+int \hyperlink{class_data_a1df6f5e1695c7cae56b9ee752a6895e8}{get\+Mes} () const
+\begin{DoxyCompactList}\small\item\em Retorna o mes. \end{DoxyCompactList}\item 
+int \hyperlink{class_data_a986bec10cbca338f08c9096d8e51efb5}{get\+Ano} () const
+\begin{DoxyCompactList}\small\item\em Retorna o ano. \end{DoxyCompactList}\item 
+void \hyperlink{class_data_ae417bf0daa0cd736be446ebac4a18589}{set\+Dia} (const int \&d)
+\begin{DoxyCompactList}\small\item\em Define o dia. \end{DoxyCompactList}\item 
+void \hyperlink{class_data_a296b98388435fff3677ab220c7e070da}{set\+Mes} (const int \&m)
+\begin{DoxyCompactList}\small\item\em Define o mes. \end{DoxyCompactList}\item 
+void \hyperlink{class_data_a84dbaee286db7c5c6039ea97d6293d53}{set\+Ano} (const int \&a)
+\begin{DoxyCompactList}\small\item\em Define o ano. \end{DoxyCompactList}\item 
+bool \hyperlink{class_data_ae4c00338b1d73e12dc177b48d7b04d89}{operator==} (const \hyperlink{class_data}{Data} \&d)
+\begin{DoxyCompactList}\small\item\em Operador de igualdade. \end{DoxyCompactList}\item 
+bool \hyperlink{class_data_a5f305274d7f60e8f1208dbd623ed4e71}{operator$<$} (const \hyperlink{class_data}{Data} \&d)
+\begin{DoxyCompactList}\small\item\em Operador de comparacao \char`\"{}menor que\char`\"{}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_data_a610a7c48e852afcc4874e1d5f0ed8f96}{operator$<$$<$} (ostream \&os, const \hyperlink{class_data}{Data} \&d)
+\begin{DoxyCompactList}\small\item\em Escreve a data na forma dd/mm/aaaa. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que guarda o dia, mes e ano e as funcoes para manipulacao da mesma. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_data_ab19ff9142aad6f03e1a8be8284d9e8fa}{}\label{class_data_ab19ff9142aad6f03e1a8be8284d9e8fa} 
+\index{Data@{Data}!Data@{Data}}
+\index{Data@{Data}!Data@{Data}}
+\subsubsection{\texorpdfstring{Data()}{Data()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily Data\+::\+Data (\begin{DoxyParamCaption}\item[{int}]{d,  }\item[{int}]{m,  }\item[{int}]{a }\end{DoxyParamCaption})}
+
+
+
+Construtor que aceita o dia, mes e ano. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & O dia. \\
+\hline
+{\em m} & O mes. \\
+\hline
+{\em a} & O ano. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_data_af11f741cb7f587e2e495452a8905a22a}{}\label{class_data_af11f741cb7f587e2e495452a8905a22a} 
+\index{Data@{Data}!Data@{Data}}
+\index{Data@{Data}!Data@{Data}}
+\subsubsection{\texorpdfstring{Data()}{Data()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily Data\+::\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construtor por defeito. 
+
+\hypertarget{class_data_aeddc16ade8663cd89c17624b80a67d4f}{}\label{class_data_aeddc16ade8663cd89c17624b80a67d4f} 
+\index{Data@{Data}!Data@{Data}}
+\index{Data@{Data}!Data@{Data}}
+\subsubsection{\texorpdfstring{Data()}{Data()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily Data\+::\+Data (\begin{DoxyParamCaption}\item[{string}]{data\+\_\+str }\end{DoxyParamCaption})}
+
+
+
+Constructor que converte string na forma \char`\"{}dd/mm/ano\char`\"{} para \hyperlink{class_data}{Data}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em data\+\_\+str} & data na forma \char`\"{}dd/mm/ano\char`\"{}. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_data_a986bec10cbca338f08c9096d8e51efb5}{}\label{class_data_a986bec10cbca338f08c9096d8e51efb5} 
+\index{Data@{Data}!get\+Ano@{get\+Ano}}
+\index{get\+Ano@{get\+Ano}!Data@{Data}}
+\subsubsection{\texorpdfstring{get\+Ano()}{getAno()}}
+{\footnotesize\ttfamily int Data\+::get\+Ano (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna o ano. 
+
+\begin{DoxyReturn}{Returns}
+O ano. 
+\end{DoxyReturn}
+\hypertarget{class_data_aa9b7bdc683d9c493d903184e85f1e6b3}{}\label{class_data_aa9b7bdc683d9c493d903184e85f1e6b3} 
+\index{Data@{Data}!get\+Dia@{get\+Dia}}
+\index{get\+Dia@{get\+Dia}!Data@{Data}}
+\subsubsection{\texorpdfstring{get\+Dia()}{getDia()}}
+{\footnotesize\ttfamily int Data\+::get\+Dia (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna o dia. 
+
+\begin{DoxyReturn}{Returns}
+O dia. 
+\end{DoxyReturn}
+\hypertarget{class_data_a1df6f5e1695c7cae56b9ee752a6895e8}{}\label{class_data_a1df6f5e1695c7cae56b9ee752a6895e8} 
+\index{Data@{Data}!get\+Mes@{get\+Mes}}
+\index{get\+Mes@{get\+Mes}!Data@{Data}}
+\subsubsection{\texorpdfstring{get\+Mes()}{getMes()}}
+{\footnotesize\ttfamily int Data\+::get\+Mes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Retorna o mes. 
+
+\begin{DoxyReturn}{Returns}
+O mes. 
+\end{DoxyReturn}
+\hypertarget{class_data_a5f305274d7f60e8f1208dbd623ed4e71}{}\label{class_data_a5f305274d7f60e8f1208dbd623ed4e71} 
+\index{Data@{Data}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Data@{Data}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Data\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_data}{Data} \&}]{d }\end{DoxyParamCaption})}
+
+
+
+Operador de comparacao \char`\"{}menor que\char`\"{}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A data a comparar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True se o primeiro parametro for menor que o segundo. 
+\end{DoxyReturn}
+\hypertarget{class_data_ae4c00338b1d73e12dc177b48d7b04d89}{}\label{class_data_ae4c00338b1d73e12dc177b48d7b04d89} 
+\index{Data@{Data}!operator==@{operator==}}
+\index{operator==@{operator==}!Data@{Data}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool Data\+::operator== (\begin{DoxyParamCaption}\item[{const \hyperlink{class_data}{Data} \&}]{d }\end{DoxyParamCaption})}
+
+
+
+Operador de igualdade. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & A data a comparar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True se o dia, o mes e ano forem iguais. False se diferentes. 
+\end{DoxyReturn}
+\hypertarget{class_data_a84dbaee286db7c5c6039ea97d6293d53}{}\label{class_data_a84dbaee286db7c5c6039ea97d6293d53} 
+\index{Data@{Data}!set\+Ano@{set\+Ano}}
+\index{set\+Ano@{set\+Ano}!Data@{Data}}
+\subsubsection{\texorpdfstring{set\+Ano()}{setAno()}}
+{\footnotesize\ttfamily void Data\+::set\+Ano (\begin{DoxyParamCaption}\item[{const int \&}]{a }\end{DoxyParamCaption})}
+
+
+
+Define o ano. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em a} & O ano \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_data_ae417bf0daa0cd736be446ebac4a18589}{}\label{class_data_ae417bf0daa0cd736be446ebac4a18589} 
+\index{Data@{Data}!set\+Dia@{set\+Dia}}
+\index{set\+Dia@{set\+Dia}!Data@{Data}}
+\subsubsection{\texorpdfstring{set\+Dia()}{setDia()}}
+{\footnotesize\ttfamily void Data\+::set\+Dia (\begin{DoxyParamCaption}\item[{const int \&}]{d }\end{DoxyParamCaption})}
+
+
+
+Define o dia. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em d} & O dia. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_data_a296b98388435fff3677ab220c7e070da}{}\label{class_data_a296b98388435fff3677ab220c7e070da} 
+\index{Data@{Data}!set\+Mes@{set\+Mes}}
+\index{set\+Mes@{set\+Mes}!Data@{Data}}
+\subsubsection{\texorpdfstring{set\+Mes()}{setMes()}}
+{\footnotesize\ttfamily void Data\+::set\+Mes (\begin{DoxyParamCaption}\item[{const int \&}]{m }\end{DoxyParamCaption})}
+
+
+
+Define o mes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em m} & O mes. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_data_af16b870e20e2993ad585a01407efb8d5}{}\label{class_data_af16b870e20e2993ad585a01407efb8d5} 
+\index{Data@{Data}!valida@{valida}}
+\index{valida@{valida}!Data@{Data}}
+\subsubsection{\texorpdfstring{valida()}{valida()}}
+{\footnotesize\ttfamily bool Data\+::valida (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Verifica se a data e valida. 
+
+\begin{DoxyReturn}{Returns}
+True se valida, false se invalida. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_data_a610a7c48e852afcc4874e1d5f0ed8f96}{}\label{class_data_a610a7c48e852afcc4874e1d5f0ed8f96} 
+\index{Data@{Data}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Data@{Data}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{os,  }\item[{const \hyperlink{class_data}{Data} \&}]{d }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Escreve a data na forma dd/mm/aaaa. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em os} & Output. \\
+\hline
+{\em d} & A data a mostrar. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_data_8h}{Data.\+h}\item 
+\hyperlink{_data_8cpp}{Data.\+cpp}\end{DoxyCompactItemize}

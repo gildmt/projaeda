@@ -1,0 +1,193 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="_transacao_8h" kind="file" language="C++">
+    <compoundname>Transacao.h</compoundname>
+    <includes refid="_cliente_8h" local="yes">Cliente.h</includes>
+    <includes refid="_data_8h" local="yes">Data.h</includes>
+    <includes refid="_utils_8h" local="yes">Utils.h</includes>
+    <includes local="no">string</includes>
+    <includes local="no">iomanip</includes>
+    <includedby refid="_bolsa_8h" local="yes">Bolsa.h</includedby>
+    <includedby refid="_transacao_8cpp" local="yes">Transacao.cpp</includedby>
+    <incdepgraph>
+      <node id="288">
+        <label>iomanip</label>
+      </node>
+      <node id="290">
+        <label>windows.h</label>
+      </node>
+      <node id="286">
+        <label>Data.h</label>
+        <link refid="_data_8h"/>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="287" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+      <node id="283">
+        <label>string</label>
+      </node>
+      <node id="285">
+        <label>fstream</label>
+      </node>
+      <node id="282">
+        <label>Cliente.h</label>
+        <link refid="_cliente_8h"/>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+      </node>
+      <node id="291">
+        <label>vector</label>
+      </node>
+      <node id="289">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="290" relation="include">
+        </childnode>
+        <childnode refid="284" relation="include">
+        </childnode>
+        <childnode refid="285" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="291" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+      </node>
+      <node id="287">
+        <label>sstream</label>
+      </node>
+      <node id="284">
+        <label>iostream</label>
+      </node>
+      <node id="281">
+        <label>Transacao.h</label>
+        <link refid="_transacao_8h"/>
+        <childnode refid="282" relation="include">
+        </childnode>
+        <childnode refid="286" relation="include">
+        </childnode>
+        <childnode refid="289" relation="include">
+        </childnode>
+        <childnode refid="283" relation="include">
+        </childnode>
+        <childnode refid="288" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="293">
+        <label>Bolsa.h</label>
+        <link refid="_bolsa_8h"/>
+        <childnode refid="294" relation="include">
+        </childnode>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="296" relation="include">
+        </childnode>
+      </node>
+      <node id="298">
+        <label>Transacao.cpp</label>
+        <link refid="_transacao_8cpp"/>
+      </node>
+      <node id="296">
+        <label>Menus.h</label>
+        <link refid="_menus_8h"/>
+        <childnode refid="295" relation="include">
+        </childnode>
+        <childnode refid="297" relation="include">
+        </childnode>
+      </node>
+      <node id="294">
+        <label>Bolsa.cpp</label>
+        <link refid="_bolsa_8cpp"/>
+      </node>
+      <node id="295">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="297">
+        <label>Menus.cpp</label>
+        <link refid="_menus_8cpp"/>
+      </node>
+      <node id="292">
+        <label>Transacao.h</label>
+        <link refid="_transacao_8h"/>
+        <childnode refid="293" relation="include">
+        </childnode>
+        <childnode refid="298" relation="include">
+        </childnode>
+      </node>
+    </invincdepgraph>
+    <innerclass refid="class_transacao" prot="public">Transacao</innerclass>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>Transacao.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>17/10/2016</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Gil<sp/>Teixeira<sp/>&amp;<sp/>Paulo<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_TRANSACAO_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRC_TRANSACAO_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_cliente_8h" kindref="compound">Cliente.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_data_8h" kindref="compound">Data.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_utils_8h" kindref="compound">Utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iomanip&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23" refid="class_transacao" refkind="compound"><highlight class="keyword">class<sp/></highlight><highlight class="normal"><ref refid="class_transacao" kindref="compound">Transacao</ref><sp/>{</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight><highlight class="keyword">private</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>titulo;</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>preco_acao;</highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_acoes;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data" kindref="compound">Data</ref><sp/>data;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nif_cliente_v;</highlight></codeline>
+<codeline lineno="36"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nif_cliente_c;</highlight></codeline>
+<codeline lineno="37"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="38"><highlight class="normal"></highlight><highlight class="keyword">public</highlight><highlight class="normal">:</highlight></codeline>
+<codeline lineno="39"><highlight class="normal"></highlight></codeline>
+<codeline lineno="53"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_transacao_1a85413a667a5e4e7632c7926900d3d517" kindref="member">Transacao</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>titulo,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>preco_acao,<sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/>num_acoes,<sp/><ref refid="class_data" kindref="compound">Data</ref><sp/>data,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>cliente_v,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>cliente_c);</highlight></codeline>
+<codeline lineno="54"><highlight class="normal"></highlight></codeline>
+<codeline lineno="63"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_transacao_1a85413a667a5e4e7632c7926900d3d517" kindref="member">Transacao</ref>(ifstream<sp/>&amp;<sp/>in);<sp/></highlight><highlight class="comment">//le<sp/>linha<sp/>de<sp/>ficheiro</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="64"><highlight class="normal"></highlight></codeline>
+<codeline lineno="75"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">bool</highlight><highlight class="normal"><sp/><ref refid="class_transacao_1a99deb0eadbb36741646610299c2fecad" kindref="member">operator&lt;</ref>(</highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_transacao" kindref="compound">Transacao</ref><sp/>&amp;tr)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;<sp/></highlight><highlight class="comment">//<sp/>compara<sp/>2<sp/>transacoes<sp/>(1<sp/>transacao<sp/>e<sp/>menor<sp/>que<sp/>outra<sp/>se<sp/>estiver<sp/>há mais<sp/>tempo<sp/>no<sp/>mercado)</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="76"><highlight class="normal"></highlight></codeline>
+<codeline lineno="88"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keyword">friend</highlight><highlight class="normal"><sp/>ostream&amp;<sp/><ref refid="class_transacao_1a1b84445ef2674a7af30a1d313844766c" kindref="member">operator&lt;&lt;</ref>(ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_transacao" kindref="compound">Transacao</ref><sp/>&amp;<sp/>transacao);<sp/><sp/></highlight><highlight class="comment">//<sp/>mostra<sp/>informacao<sp/>da<sp/>transacao<sp/>no<sp/>ecra</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="89"><highlight class="normal"></highlight></codeline>
+<codeline lineno="98"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_transacao_1af48d21e7643548e9b8ff9ee9d1cd39c8" kindref="member">getTitulo</ref>();</highlight></codeline>
+<codeline lineno="99"><highlight class="normal"></highlight></codeline>
+<codeline lineno="108"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/><ref refid="class_transacao_1a04806fca6de35ac9f57044c2bd2c39b3" kindref="member">getPreco_acao</ref>();</highlight></codeline>
+<codeline lineno="109"><highlight class="normal"></highlight></codeline>
+<codeline lineno="118"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="class_transacao_1af52a47c91fe23258ddd212a78f044297" kindref="member">getNum_acoes</ref>();</highlight></codeline>
+<codeline lineno="119"><highlight class="normal"></highlight></codeline>
+<codeline lineno="128"><highlight class="normal"><sp/><sp/><sp/><sp/><ref refid="class_data" kindref="compound">Data</ref><sp/><ref refid="class_transacao_1a94162db1ef8a17eee755c3a3c1d7744b" kindref="member">getData</ref>();</highlight></codeline>
+<codeline lineno="129"><highlight class="normal"></highlight></codeline>
+<codeline lineno="138"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_transacao_1a67521a6dea9a82ca2d7d3821a10a6e0d" kindref="member">getCliente_v</ref>();</highlight></codeline>
+<codeline lineno="139"><highlight class="normal"></highlight></codeline>
+<codeline lineno="148"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/><ref refid="class_transacao_1ad896abaa081d1407b69f8bd9a60b107c" kindref="member">getCliente_c</ref>();</highlight></codeline>
+<codeline lineno="149"><highlight class="normal"></highlight></codeline>
+<codeline lineno="158"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_transacao_1aa4b2e7563ee4cb46bea35ea5b8d5f96a" kindref="member">guardar</ref>(ofstream<sp/>&amp;<sp/>out)<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="159"><highlight class="normal">};</highlight></codeline>
+<codeline lineno="160"><highlight class="normal"></highlight></codeline>
+<codeline lineno="161"><highlight class="normal"></highlight></codeline>
+<codeline lineno="162"><highlight class="normal"></highlight></codeline>
+<codeline lineno="163"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SRC_TRANSACAO_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="Transacao.h"/>
+  </compounddef>
+</doxygen>

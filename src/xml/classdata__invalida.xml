@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="classdata__invalida" kind="class" language="C++" prot="public">
+    <compoundname>data_invalida</compoundname>
+    <includes refid="_data_8h" local="no">Data.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="classdata__invalida_1a7572114f50bf62e0edd4b79c39f0ddb7" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string data_invalida::erro</definition>
+        <argsstring></argsstring>
+        <name>erro</name>
+        <briefdescription>
+<para>The erro. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="186" column="1" bodyfile="Data.h" bodystart="186" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="classdata__invalida_1a070558ee747109d2de521bacaa258046" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>data_invalida::data_invalida</definition>
+        <argsstring>(string erro)</argsstring>
+        <name>data_invalida</name>
+        <param>
+          <type>string</type>
+          <declname>erro</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>erro</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The erro. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="197" column="1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="classdata__invalida_1a610a7c48e852afcc4874e1d5f0ed8f96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend ostream &amp;</type>
+        <definition>ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;os, const Data &amp;d)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_data" kindref="compound">Data</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Stream insertion operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operating system. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_data" kindref="compound">Data</ref> to process.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shifted result. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="210" column="1" bodyfile="Data.cpp" bodystart="109" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A data invalida. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Data.h" line="184" column="1" bodyfile="Data.h" bodystart="184" bodyend="211"/>
+    <listofallmembers>
+      <member refid="classdata__invalida_1a070558ee747109d2de521bacaa258046" prot="public" virt="non-virtual"><scope>data_invalida</scope><name>data_invalida</name></member>
+      <member refid="classdata__invalida_1a7572114f50bf62e0edd4b79c39f0ddb7" prot="private" virt="non-virtual"><scope>data_invalida</scope><name>erro</name></member>
+      <member refid="classdata__invalida_1a610a7c48e852afcc4874e1d5f0ed8f96" prot="public" virt="non-virtual"><scope>data_invalida</scope><name>operator&lt;&lt;</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

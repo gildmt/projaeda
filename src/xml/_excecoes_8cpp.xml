@@ -1,0 +1,108 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="_excecoes_8cpp" kind="file" language="C++">
+    <compoundname>Excecoes.cpp</compoundname>
+    <includes refid="_excecoes_8h" local="yes">Excecoes.h</includes>
+    <incdepgraph>
+      <node id="94">
+        <label>Excecoes.h</label>
+        <link refid="_excecoes_8h"/>
+        <childnode refid="95" relation="include">
+        </childnode>
+      </node>
+      <node id="95">
+        <label>string</label>
+      </node>
+      <node id="93">
+        <label>Excecoes.cpp</label>
+        <link refid="_excecoes_8cpp"/>
+        <childnode refid="94" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_excecoes_8cpp_1aadb54278cd2995f4fbae46df928e82bf" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;out, const FicheiroInexistente &amp;fich_inex)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_ficheiro_inexistente" kindref="compound">FicheiroInexistente</ref> &amp;</type>
+          <declname>fich_inex</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Excecoes.cpp" line="16" column="1" bodyfile="Excecoes.cpp" bodystart="16" bodyend="21"/>
+      </memberdef>
+      <memberdef kind="function" id="_excecoes_8cpp_1a1b3204d4e9fc715ae1f42b8ef53a6db6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;out, const FicheiroInvalido &amp;fich_inva)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_ficheiro_invalido" kindref="compound">FicheiroInvalido</ref> &amp;</type>
+          <declname>fich_inva</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Excecoes.cpp" line="28" column="1" bodyfile="Excecoes.cpp" bodystart="28" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Excecoes.c</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/>Created<sp/>on:<sp/>17/10/2016</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Gil<sp/>Teixeira<sp/>&amp;<sp/>Paulo<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_excecoes_8h" kindref="compound">Excecoes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><ref refid="class_ficheiro_inexistente_1a9ea81e48a74c65bcd6b15216d57bc503" kindref="member">FicheiroInexistente::FicheiroInexistente</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tipo_fich){</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;tipo_fich<sp/>=<sp/><ref refid="class_ficheiro_inexistente_1ac848deed05e95fdd183bba69cc646577" kindref="member">tipo_fich</ref>;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal">ostream&amp;<sp/><ref refid="class_ficheiro_inexistente_1a28e61dd2982f9766b4d8a1615208033e" kindref="member">operator&lt;&lt; </ref>(ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_ficheiro_inexistente" kindref="compound">FicheiroInexistente</ref><sp/>&amp;<sp/>fich_inex){</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nEsse<sp/>ficheiro<sp/>nao<sp/>existe.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl<sp/></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Sera<sp/>criado<sp/>um<sp/>ficheiro<sp/>de<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>fich_inex.<ref refid="class_ficheiro_inexistente_1ac848deed05e95fdd183bba69cc646577" kindref="member">tipo_fich</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>com<sp/>esse<sp/>nome.\n&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="21"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal"><ref refid="class_ficheiro_invalido_1a000f42e4f32d27943000605907240ee3" kindref="member">FicheiroInvalido::FicheiroInvalido</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/><ref refid="class_ficheiro_inexistente_1ac848deed05e95fdd183bba69cc646577" kindref="member">tipo_fich</ref>){</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;tipo_fich<sp/>=<sp/><ref refid="class_ficheiro_inexistente_1ac848deed05e95fdd183bba69cc646577" kindref="member">tipo_fich</ref>;</highlight></codeline>
+<codeline lineno="25"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="26"><highlight class="normal"></highlight></codeline>
+<codeline lineno="27"><highlight class="normal"></highlight></codeline>
+<codeline lineno="28"><highlight class="normal">ostream&amp;<sp/><ref refid="class_ficheiro_inexistente_1a28e61dd2982f9766b4d8a1615208033e" kindref="member">operator&lt;&lt; </ref>(ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_ficheiro_invalido" kindref="compound">FicheiroInvalido</ref><sp/>&amp;<sp/>fich_inva){</highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;\nEsse<sp/>ficheiro<sp/>e<sp/>invalido.&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>endl<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;Introduza<sp/>o<sp/>nome<sp/>de<sp/>um<sp/>ficheiro<sp/>de<sp/>&quot;</highlight><highlight class="normal"><sp/></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>fich_inva.tipo_fich<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>valido(ou<sp/>control+z<sp/>para<sp/>sair):<sp/>&quot;</highlight><highlight class="normal">;</highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="33"><highlight class="normal"></highlight></codeline>
+    </programlisting>
+    <location file="Excecoes.cpp"/>
+  </compounddef>
+</doxygen>

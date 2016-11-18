@@ -1,0 +1,99 @@
+\hypertarget{_menus_8cpp}{}\section{Menus.\+cpp File Reference}
+\label{_menus_8cpp}\index{Menus.\+cpp@{Menus.\+cpp}}
+{\ttfamily \#include \char`\"{}Menus.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{_menus_8cpp_a1ea89981ed52e2e57eca0d22a00817f2}{verfica\+\_\+fich} (string \&fich\+\_\+veri, string tipo\+\_\+fich)
+\begin{DoxyCompactList}\small\item\em Verfica se fich\+\_\+veri existe e se e valido. \end{DoxyCompactList}\item 
+int \hyperlink{_menus_8cpp_a978c7557eca55fb477d0e41bf13b2da9}{info\+Inicial} (string \&\hyperlink{_utils_8h_a1335b18f135ed58c716b3ddcecdc8cce}{fich\+Clientes}, string \&\hyperlink{_utils_8h_a66ff7fedd13a1b40664042a086ca0f27}{fich\+Transacoes}, string \&\hyperlink{_utils_8h_ad22902af7efe6d185550055b7caa5cbb}{fich\+Ordens\+Venda}, string \&\hyperlink{_utils_8h_acaee3ba642d3be244820a97e5eb5b7f7}{fich\+Ordens\+Compra})
+\begin{DoxyCompactList}\small\item\em Verifica os 4 ficheiros de dados com a funcao verifica\+\_\+fich. \end{DoxyCompactList}\item 
+unsigned short int \hyperlink{_menus_8cpp_a583f75692d29bdfc501b6679b6d2f426}{menu\+Inicial} ()
+\item 
+void \hyperlink{_menus_8cpp_a128e37d4671a56ab0fcd512eb2454f64}{opcoes\+Iniciais} (\hyperlink{class_bolsa}{Bolsa} \&bolsa\+\_\+de\+\_\+valores)
+\begin{DoxyCompactList}\small\item\em Le a opcao do utilizadoe do menu inicial. \end{DoxyCompactList}\item 
+void \hyperlink{_menus_8cpp_af1397c4e7e9d57be0c3bac54ff27188e}{menu\+Transacoes} (\hyperlink{class_bolsa}{Bolsa} \&bolsa\+\_\+de\+\_\+valores)
+\begin{DoxyCompactList}\small\item\em Apresenta o menu com as varias opcoes para listar as transacoes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_menus_8cpp_a978c7557eca55fb477d0e41bf13b2da9}{}\label{_menus_8cpp_a978c7557eca55fb477d0e41bf13b2da9} 
+\index{Menus.\+cpp@{Menus.\+cpp}!info\+Inicial@{info\+Inicial}}
+\index{info\+Inicial@{info\+Inicial}!Menus.\+cpp@{Menus.\+cpp}}
+\subsubsection{\texorpdfstring{info\+Inicial()}{infoInicial()}}
+{\footnotesize\ttfamily int info\+Inicial (\begin{DoxyParamCaption}\item[{string \&}]{fich\+Clientes,  }\item[{string \&}]{fich\+Transacoes,  }\item[{string \&}]{fich\+Ordens\+Venda,  }\item[{string \&}]{fich\+Ordens\+Compra }\end{DoxyParamCaption})}
+
+
+
+Verifica os 4 ficheiros de dados com a funcao verifica\+\_\+fich. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fich\+Clientes} & O ficheiro com as informacoes dos clientes. \\
+\hline
+{\em fich\+Transacoes} & O ficheiro com as informacoes das transacoes. \\
+\hline
+{\em fich\+Ordens\+Venda} & O ficheiro com as informacoes das ordens venda. \\
+\hline
+{\em fich\+Ordens\+Compra} & O ficheiro com as informacoes das ordens compra.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se um dos 4 ficheiros nao for valido e 0 se todos forem validos. 
+\end{DoxyReturn}
+\hypertarget{_menus_8cpp_a583f75692d29bdfc501b6679b6d2f426}{}\label{_menus_8cpp_a583f75692d29bdfc501b6679b6d2f426} 
+\index{Menus.\+cpp@{Menus.\+cpp}!menu\+Inicial@{menu\+Inicial}}
+\index{menu\+Inicial@{menu\+Inicial}!Menus.\+cpp@{Menus.\+cpp}}
+\subsubsection{\texorpdfstring{menu\+Inicial()}{menuInicial()}}
+{\footnotesize\ttfamily unsigned short int menu\+Inicial (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+\hypertarget{_menus_8cpp_af1397c4e7e9d57be0c3bac54ff27188e}{}\label{_menus_8cpp_af1397c4e7e9d57be0c3bac54ff27188e} 
+\index{Menus.\+cpp@{Menus.\+cpp}!menu\+Transacoes@{menu\+Transacoes}}
+\index{menu\+Transacoes@{menu\+Transacoes}!Menus.\+cpp@{Menus.\+cpp}}
+\subsubsection{\texorpdfstring{menu\+Transacoes()}{menuTransacoes()}}
+{\footnotesize\ttfamily void menu\+Transacoes (\begin{DoxyParamCaption}\item[{\hyperlink{class_bolsa}{Bolsa} \&}]{bolsa\+\_\+de\+\_\+valores }\end{DoxyParamCaption})}
+
+
+
+Apresenta o menu com as varias opcoes para listar as transacoes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bolsa\+\_\+de\+\_\+valores} & A classe que contem a bolsa de valores. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_menus_8cpp_a128e37d4671a56ab0fcd512eb2454f64}{}\label{_menus_8cpp_a128e37d4671a56ab0fcd512eb2454f64} 
+\index{Menus.\+cpp@{Menus.\+cpp}!opcoes\+Iniciais@{opcoes\+Iniciais}}
+\index{opcoes\+Iniciais@{opcoes\+Iniciais}!Menus.\+cpp@{Menus.\+cpp}}
+\subsubsection{\texorpdfstring{opcoes\+Iniciais()}{opcoesIniciais()}}
+{\footnotesize\ttfamily void opcoes\+Iniciais (\begin{DoxyParamCaption}\item[{\hyperlink{class_bolsa}{Bolsa} \&}]{bolsa\+\_\+de\+\_\+valores }\end{DoxyParamCaption})}
+
+
+
+Le a opcao do utilizadoe do menu inicial. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em bolsa\+\_\+de\+\_\+valores} & A classe que contem a bolsa de valores. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_menus_8cpp_a1ea89981ed52e2e57eca0d22a00817f2}{}\label{_menus_8cpp_a1ea89981ed52e2e57eca0d22a00817f2} 
+\index{Menus.\+cpp@{Menus.\+cpp}!verfica\+\_\+fich@{verfica\+\_\+fich}}
+\index{verfica\+\_\+fich@{verfica\+\_\+fich}!Menus.\+cpp@{Menus.\+cpp}}
+\subsubsection{\texorpdfstring{verfica\+\_\+fich()}{verfica\_fich()}}
+{\footnotesize\ttfamily int verfica\+\_\+fich (\begin{DoxyParamCaption}\item[{string \&}]{fich\+\_\+veri,  }\item[{string}]{tipo\+\_\+fich }\end{DoxyParamCaption})}
+
+
+
+Verfica se fich\+\_\+veri existe e se e valido. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fich\+\_\+veri} & Ficheiro a verificar. \\
+\hline
+{\em tipo\+\_\+fich} & Cabecalho valido do ficheiro.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+1 se nao for valido ou der erro e 0 se o ficheiro for valido. 
+\end{DoxyReturn}

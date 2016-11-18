@@ -5,34 +5,9 @@
 *      Author: Gil Teixeira & Paulo Correia
 */
 
-
 #include "Bolsa.h"
 
-const vector<Cliente>& Bolsa::getClientes() const {
-	return clientes;
-}
-
-void Bolsa::setClientes(const vector<Cliente>& clientes) {
-	this->clientes = clientes;
-}
-
-const vector<OrdemCompra>& Bolsa::getOrdensCompra() const {
-	return ordensCompra;
-}
-
-void Bolsa::setOrdensCompra(const vector<OrdemCompra>& ordensCompra) {
-	this->ordensCompra = ordensCompra;
-}
-
-const vector<OrdemVenda>& Bolsa::getOrdensVenda() const {
-	return ordensVenda;
-}
-
-void Bolsa::setOrdensVenda(const vector<OrdemVenda>& ordensVenda) {
-	this->ordensVenda = ordensVenda;
-}
-
-
+using namespace std;
 
 
 void Bolsa::le_ficheiros_cli(string & fichClientes){
@@ -40,7 +15,7 @@ void Bolsa::le_ficheiros_cli(string & fichClientes){
 	int num_cli;
 	ifstream f_clientes;
 
-	f_clientes.open(fichClientes, std::fstream::in | std::fstream::out | std::fstream::app);
+	f_clientes.open(fichClientes);
 	getline(f_clientes, aux, ':');  //retira Clientes, nao interesasa
 	f_clientes >> num_cli; f_clientes.ignore(); //retira num de iteracoes
 	
@@ -53,13 +28,12 @@ void Bolsa::le_ficheiros_cli(string & fichClientes){
 
 	f_clientes.close();
 }
-
 void Bolsa::le_ficheiros_tran(string & fichTransacoes){
 	string aux;
 	int num_tran;
 	ifstream f_transacoes;
 
-	f_transacoes.open(fichTransacoes, std::fstream::in | std::fstream::out | std::fstream::app);
+	f_transacoes.open(fichTransacoes);
 	getline(f_transacoes, aux, ':');  //retira "Transacoes", nao interesasa
 	f_transacoes >> num_tran; f_transacoes.ignore(); //retira num de iteracoes
 
@@ -78,7 +52,7 @@ void Bolsa::le_ficheiros_ordv(string & fichOrdensVenda){
 	int num_ov;
 	ifstream f_OrdensVenda;
 
-	f_OrdensVenda.open(fichOrdensVenda, std::fstream::in | std::fstream::out | std::fstream::app);
+	f_OrdensVenda.open(fichOrdensVenda);
 	getline(f_OrdensVenda, aux, ':');  //retira "Ordens de Venda", nao interesasa
 	f_OrdensVenda >> num_ov; f_OrdensVenda.ignore(); //retira num de iteracoes
 
@@ -114,7 +88,7 @@ void Bolsa::le_ficheiros_ordc(string & fichOrdensCompra){
 	int num_oc;
 	ifstream f_OrdensCompra;
 
-	f_OrdensCompra.open(fichOrdensCompra, std::fstream::in | std::fstream::out | std::fstream::app);
+	f_OrdensCompra.open(fichOrdensCompra);
 	getline(f_OrdensCompra, aux, ':');  //retira "Ordens de Compra", nao interesasa
 	f_OrdensCompra >> num_oc; f_OrdensCompra.ignore(); //retira num de iteracoes
 
@@ -228,9 +202,10 @@ void Bolsa::ad_ordem_compra(){
 	for (size_t i = 0; i < clientes.size(); i++) {
 		if (nif == clientes.at(i).getNif()) {
 			cout << TAB << "Titulo da acao: ";
-			titulo = leTitulo();
+			getline(cin, titulo);
 
 			if (titulo.empty()) {
+				cout << TAB << "Input invalido.";
 				espera_input();
 				return;
 			}
@@ -242,10 +217,17 @@ void Bolsa::ad_ordem_compra(){
 			cout << TAB << "Valor Maximo a Gastar: ";
 			vMaxGastar = le_float();
 
+			if (pMax > vMaxGastar){
+				cout << TAB << "Preco maximo por acao nao pode ser maior que o Valor Maximo a Gastar." << endl;
+				espera_input();
+				return;
+			}
+
+
 			Data data = getData();
 
 			for (size_t j = 0; j < ordensVenda.size(); j++) {
-				if (ordensVenda.at(j).getTitulo() == titulo) {
+				if (ordensVenda.at(j).getTitulo() == titulo && ordensVenda.at(j).getNif() != nif) {
 					if (ordensVenda.at(j).getPrecoMin() <= pMax) {
 						if (ordensVenda.at(j).getPrecoMin() * ordensVenda.at(j).getQuantidade() <= vMaxGastar) {
 							Transacao t(titulo, ordensVenda.at(j).getPrecoMin(), ordensVenda.at(j).getQuantidade(), data, ordensVenda.at(j).getNif(), clientes.at(i).getNif());
@@ -333,7 +315,7 @@ void Bolsa::ad_ordem_venda(){
 			Data data = getData();
 
 			for (size_t j = 0; j < ordensCompra.size(); j++) {
-				if (ordensCompra.at(j).getTitulo() == titulo) {
+				if (ordensCompra.at(j).getTitulo() == titulo && ordensCompra.at(j).getNif() != nif) {
 					if (ordensCompra.at(j).getPrecoMax() >= pMin) {
 						if (pMin * qtd <= ordensCompra.at(j).getValorMaxGastar()) {
 							Transacao t(titulo, pMin, qtd, data, clientes.at(i).getNif(), ordensCompra.at(j).getNif());
@@ -391,7 +373,7 @@ void Bolsa::ad_cli(){
 
 	cout << endl << endl;
 	cout << TAB << "Nome do cliente: ";
-	std::getline(std::cin, nome);
+	getline(cin, nome);
 
 	if (nome.empty()) {
 		cout << TAB << "Input invalido.";
@@ -723,14 +705,4 @@ void Bolsa::listar_ordensCompra()
 	cout << endl << endl;
 
 	espera_input();
-}
-
-int Bolsa::pos_vec_cli(string nome_cli){
-	for (size_t i = 0; i < clientes.size(); i++)
-	if (clientes.at(i).getNome() == nome_cli)
-		return i;
-
-	return -1;
-
-
 }

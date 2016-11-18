@@ -1,0 +1,184 @@
+\hypertarget{_utils_8cpp}{}\section{Utils.\+cpp File Reference}
+\label{_utils_8cpp}\index{Utils.\+cpp@{Utils.\+cpp}}
+{\ttfamily \#include \char`\"{}Utils.\+h\char`\"{}}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{_utils_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}{clear\+Screen} ()
+\begin{DoxyCompactList}\small\item\em Apaga o ecra. \end{DoxyCompactList}\item 
+void \hyperlink{_utils_8cpp_a3412c3984b6336261d13e3c0548a5c26}{linha} (int n)
+\begin{DoxyCompactList}\small\item\em Linha usada para formatacao de elementos no ecra. \end{DoxyCompactList}\item 
+long \hyperlink{_utils_8cpp_a4d88f6a79395755e9a71b7d1978783d8}{le\+\_\+num} ()
+\begin{DoxyCompactList}\small\item\em Le um numero escrito pelo o utilizador. \end{DoxyCompactList}\item 
+float \hyperlink{_utils_8cpp_a8e09ff677949c111802ae377fdd91617}{le\+\_\+float} ()
+\begin{DoxyCompactList}\small\item\em Le um numero escrito pelo o utilizador. \end{DoxyCompactList}\item 
+int \hyperlink{_utils_8cpp_ab37c9db2e4e3eabb790109bf743d8e13}{le\+Inteiro} (int min, int max)
+\begin{DoxyCompactList}\small\item\em Le um numero escrito pelo o utilizador. \end{DoxyCompactList}\item 
+long \hyperlink{_utils_8cpp_a7a3eb435e1320dfde1d3b6cb622cb922}{le\+Nif} ()
+\begin{DoxyCompactList}\small\item\em Le o N\+IF de um utilizador. \end{DoxyCompactList}\item 
+string \hyperlink{_utils_8cpp_ae99df0555f89687a90cafcf93944a5c7}{le\+Titulo} ()
+\begin{DoxyCompactList}\small\item\em Le uma string de uma palavra escrita pelo utiizador.. \end{DoxyCompactList}\item 
+void \hyperlink{_utils_8cpp_ae6a78d75ee2f55c07e88328951c35a65}{espera\+\_\+input} ()
+\begin{DoxyCompactList}\small\item\em Espera por imput do utilizador. \end{DoxyCompactList}\item 
+\hyperlink{class_data}{Data} \hyperlink{_utils_8cpp_a2df60dc042161d582a43a28edf252e75}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Retorna a data actual. \end{DoxyCompactList}\item 
+bool \hyperlink{_utils_8cpp_a7aaba7cf2f82963fb3be7a4d32194264}{fich\+\_\+vazio} (fstream \&p\+File)
+\begin{DoxyCompactList}\small\item\em Testa para ver se um ficheiro esta vazio. \end{DoxyCompactList}\item 
+void \hyperlink{_utils_8cpp_a4b91d1275d652ef7f6bc53d5389f95cd}{acabalog} (string \&str)
+\begin{DoxyCompactList}\small\item\em Acrescenta o sufixo .log a uma string passada. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\hypertarget{_utils_8cpp_a4b91d1275d652ef7f6bc53d5389f95cd}{}\label{_utils_8cpp_a4b91d1275d652ef7f6bc53d5389f95cd} 
+\index{Utils.\+cpp@{Utils.\+cpp}!acabalog@{acabalog}}
+\index{acabalog@{acabalog}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{acabalog()}{acabalog()}}
+{\footnotesize\ttfamily void acabalog (\begin{DoxyParamCaption}\item[{string \&}]{str }\end{DoxyParamCaption})}
+
+
+
+Acrescenta o sufixo .log a uma string passada. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em str} & A string para acrescentar o sufixo. \\
+\hline
+\end{DoxyParams}
+\hypertarget{_utils_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f}{}\label{_utils_8cpp_a9d7e8af417b6d543da691e9c0e2f6f9f} 
+\index{Utils.\+cpp@{Utils.\+cpp}!clear\+Screen@{clear\+Screen}}
+\index{clear\+Screen@{clear\+Screen}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{clear\+Screen()}{clearScreen()}}
+{\footnotesize\ttfamily void clear\+Screen (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Apaga o ecra. 
+
+\hypertarget{_utils_8cpp_ae6a78d75ee2f55c07e88328951c35a65}{}\label{_utils_8cpp_ae6a78d75ee2f55c07e88328951c35a65} 
+\index{Utils.\+cpp@{Utils.\+cpp}!espera\+\_\+input@{espera\+\_\+input}}
+\index{espera\+\_\+input@{espera\+\_\+input}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{espera\+\_\+input()}{espera\_input()}}
+{\footnotesize\ttfamily void espera\+\_\+input (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Espera por imput do utilizador. 
+
+\hypertarget{_utils_8cpp_a7aaba7cf2f82963fb3be7a4d32194264}{}\label{_utils_8cpp_a7aaba7cf2f82963fb3be7a4d32194264} 
+\index{Utils.\+cpp@{Utils.\+cpp}!fich\+\_\+vazio@{fich\+\_\+vazio}}
+\index{fich\+\_\+vazio@{fich\+\_\+vazio}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{fich\+\_\+vazio()}{fich\_vazio()}}
+{\footnotesize\ttfamily bool fich\+\_\+vazio (\begin{DoxyParamCaption}\item[{fstream \&}]{p\+File }\end{DoxyParamCaption})}
+
+
+
+Testa para ver se um ficheiro esta vazio. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+File} & O ficheiro a testar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True se o ficheiro estiver vazio, falso se nao. 
+\end{DoxyReturn}
+\hypertarget{_utils_8cpp_a2df60dc042161d582a43a28edf252e75}{}\label{_utils_8cpp_a2df60dc042161d582a43a28edf252e75} 
+\index{Utils.\+cpp@{Utils.\+cpp}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily \hyperlink{class_data}{Data} get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna a data actual. 
+
+\begin{DoxyReturn}{Returns}
+A data actual. 
+\end{DoxyReturn}
+\hypertarget{_utils_8cpp_a8e09ff677949c111802ae377fdd91617}{}\label{_utils_8cpp_a8e09ff677949c111802ae377fdd91617} 
+\index{Utils.\+cpp@{Utils.\+cpp}!le\+\_\+float@{le\+\_\+float}}
+\index{le\+\_\+float@{le\+\_\+float}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{le\+\_\+float()}{le\_float()}}
+{\footnotesize\ttfamily float le\+\_\+float (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Le um numero escrito pelo o utilizador. 
+
+\begin{DoxyReturn}{Returns}
+Um float com o numero lido. 
+\end{DoxyReturn}
+\hypertarget{_utils_8cpp_a4d88f6a79395755e9a71b7d1978783d8}{}\label{_utils_8cpp_a4d88f6a79395755e9a71b7d1978783d8} 
+\index{Utils.\+cpp@{Utils.\+cpp}!le\+\_\+num@{le\+\_\+num}}
+\index{le\+\_\+num@{le\+\_\+num}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{le\+\_\+num()}{le\_num()}}
+{\footnotesize\ttfamily long le\+\_\+num (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Le um numero escrito pelo o utilizador. 
+
+\begin{DoxyReturn}{Returns}
+Um long com o numero lido. 
+\end{DoxyReturn}
+\hypertarget{_utils_8cpp_ab37c9db2e4e3eabb790109bf743d8e13}{}\label{_utils_8cpp_ab37c9db2e4e3eabb790109bf743d8e13} 
+\index{Utils.\+cpp@{Utils.\+cpp}!le\+Inteiro@{le\+Inteiro}}
+\index{le\+Inteiro@{le\+Inteiro}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{le\+Inteiro()}{leInteiro()}}
+{\footnotesize\ttfamily int le\+Inteiro (\begin{DoxyParamCaption}\item[{int}]{min,  }\item[{int}]{max }\end{DoxyParamCaption})}
+
+
+
+Le um numero escrito pelo o utilizador. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em min} & O valor minimo a partir do qual aceita um inteiro para ler. \\
+\hline
+{\em max} & O valor maximo antes do qual aceita um inteiro para ler.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Um inteiro com o numero lido. 
+\end{DoxyReturn}
+\hypertarget{_utils_8cpp_a7a3eb435e1320dfde1d3b6cb622cb922}{}\label{_utils_8cpp_a7a3eb435e1320dfde1d3b6cb622cb922} 
+\index{Utils.\+cpp@{Utils.\+cpp}!le\+Nif@{le\+Nif}}
+\index{le\+Nif@{le\+Nif}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{le\+Nif()}{leNif()}}
+{\footnotesize\ttfamily long le\+Nif (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Le o N\+IF de um utilizador. 
+
+\begin{DoxyReturn}{Returns}
+Um long com o N\+IF lido. 
+\end{DoxyReturn}
+\hypertarget{_utils_8cpp_ae99df0555f89687a90cafcf93944a5c7}{}\label{_utils_8cpp_ae99df0555f89687a90cafcf93944a5c7} 
+\index{Utils.\+cpp@{Utils.\+cpp}!le\+Titulo@{le\+Titulo}}
+\index{le\+Titulo@{le\+Titulo}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{le\+Titulo()}{leTitulo()}}
+{\footnotesize\ttfamily string le\+Titulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Le uma string de uma palavra escrita pelo utiizador.. 
+
+\begin{DoxyReturn}{Returns}
+Uma string com o titulo lido. 
+\end{DoxyReturn}
+\hypertarget{_utils_8cpp_a3412c3984b6336261d13e3c0548a5c26}{}\label{_utils_8cpp_a3412c3984b6336261d13e3c0548a5c26} 
+\index{Utils.\+cpp@{Utils.\+cpp}!linha@{linha}}
+\index{linha@{linha}!Utils.\+cpp@{Utils.\+cpp}}
+\subsubsection{\texorpdfstring{linha()}{linha()}}
+{\footnotesize\ttfamily void linha (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})}
+
+
+
+Linha usada para formatacao de elementos no ecra. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em n} & Tamanho da linha e imprimir. \\
+\hline
+\end{DoxyParams}

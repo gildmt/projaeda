@@ -1,0 +1,414 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_bolsa" kind="class" language="C++" prot="public">
+    <compoundname>Bolsa</compoundname>
+    <includes refid="_bolsa_8h" local="no">Bolsa.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_bolsa_1ab2f4b870140c3a4ff1f00d36249d4d02" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_cliente" kindref="compound">Cliente</ref> &gt;</type>
+        <definition>vector&lt;Cliente&gt; Bolsa::clientes</definition>
+        <argsstring></argsstring>
+        <name>clientes</name>
+        <briefdescription>
+<para>Vector de clientes da bolsa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="34" column="1" bodyfile="Bolsa.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bolsa_1aa4c6ea428efba6b3bc140396f96f2a7b" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_ordem_compra" kindref="compound">OrdemCompra</ref> &gt;</type>
+        <definition>vector&lt;OrdemCompra&gt; Bolsa::ordensCompra</definition>
+        <argsstring></argsstring>
+        <name>ordensCompra</name>
+        <briefdescription>
+<para>Vector de ordens compra da bolsa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="36" column="1" bodyfile="Bolsa.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bolsa_1a738b783eb538cab704c35dc4d3e2f69d" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_ordem_venda" kindref="compound">OrdemVenda</ref> &gt;</type>
+        <definition>vector&lt;OrdemVenda&gt; Bolsa::ordensVenda</definition>
+        <argsstring></argsstring>
+        <name>ordensVenda</name>
+        <briefdescription>
+<para>Vector de ordens venda da bolda. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="38" column="1" bodyfile="Bolsa.h" bodystart="38" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_bolsa_1a1e576bd3903d0840d52cd4a9ec947973" prot="private" static="no" mutable="no">
+        <type>vector&lt; <ref refid="class_transacao" kindref="compound">Transacao</ref> &gt;</type>
+        <definition>vector&lt;Transacao&gt; Bolsa::transacoes</definition>
+        <argsstring></argsstring>
+        <name>transacoes</name>
+        <briefdescription>
+<para>Vector de transacoes da bolsa. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="40" column="1" bodyfile="Bolsa.h" bodystart="40" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_bolsa_1a79eb058719d17c21fab6c4b95db8c1b6" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type></type>
+        <definition>Bolsa::Bolsa</definition>
+        <argsstring>()</argsstring>
+        <name>Bolsa</name>
+        <briefdescription>
+<para>Construtor por defeito. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="49" column="1" bodyfile="Bolsa.h" bodystart="49" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1aabb97dba1ba1783fbe860058764c6a90" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::le_ficheiros</definition>
+        <argsstring>(string &amp;fichClientes, string &amp;fichTransacoes, string &amp;fichOrdensVenda, string &amp;fichOrdensCompra)</argsstring>
+        <name>le_ficheiros</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichClientes</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichTransacoes</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichOrdensVenda</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichOrdensCompra</declname>
+        </param>
+        <briefdescription>
+<para>Le os ficheiros com informacoes para preencher os vectores da bolsa. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fichClientes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro com as informacoes dos clientes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fichTransacoes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro com as informacoes das transacoes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fichOrdensVenda</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro com as informacoes das ordens venda. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fichOrdensCompra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro com as informacoes das ordens compra. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="62" column="1" bodyfile="Bolsa.cpp" bodystart="122" bodyend="127"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1a2f295e1c0ddd43401056bde7d6a9bfde" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::le_ficheiros_cli</definition>
+        <argsstring>(string &amp;fichClientes)</argsstring>
+        <name>le_ficheiros_cli</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichClientes</declname>
+        </param>
+        <briefdescription>
+<para>Le o ficheiro com as informacoes dos clientes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fichClientes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro com as informacoes dos clientes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="72" column="1" bodyfile="Bolsa.cpp" bodystart="13" bodyend="30"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1ab099261f63bff9e274b94bca96cbd2f4" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::le_ficheiros_tran</definition>
+        <argsstring>(string &amp;fichTransacoes)</argsstring>
+        <name>le_ficheiros_tran</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichTransacoes</declname>
+        </param>
+        <briefdescription>
+<para>Le o ficheiro com as informacoes das transacoes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fichTransacoes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro com as informacoes das transacoes. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="82" column="1" bodyfile="Bolsa.cpp" bodystart="31" bodyend="49"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1ab0cd2fab3d7490d5d4a431e5cb1106e6" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::le_ficheiros_ordv</definition>
+        <argsstring>(string &amp;fichOrdensVenda)</argsstring>
+        <name>le_ficheiros_ordv</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichOrdensVenda</declname>
+        </param>
+        <briefdescription>
+<para>Le o ficheiro com as informacoes das ordens de venda. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fichOrdensVenda</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro com as informacoes das ordens venda. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="92" column="1" bodyfile="Bolsa.cpp" bodystart="50" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1a57e3864eac22b2690e04fb8be39b5e58" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::le_ficheiros_ordc</definition>
+        <argsstring>(string &amp;fichOrdensCompra)</argsstring>
+        <name>le_ficheiros_ordc</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichOrdensCompra</declname>
+        </param>
+        <briefdescription>
+<para>Le o ficheiro com as informacoes das ordens de compra. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fichOrdensCompra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro com as informacoes das ordens compra. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="102" column="1" bodyfile="Bolsa.cpp" bodystart="86" bodyend="119"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1a12c0a8faf58b0803228ed17022c6ecfe" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::guarda_alteracoes</definition>
+        <argsstring>(int n, string &amp;fich)</argsstring>
+        <name>guarda_alteracoes</name>
+        <param>
+          <type>int</type>
+          <declname>n</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>fich</declname>
+        </param>
+        <briefdescription>
+<para>Guarda alteracoes feitas nos vectores no ficheiro fich. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>n</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Inteiro de 1 a 4 que representa os varios vectores da bolsa. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fich</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>O ficheiro onde o vector e guardado. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="113" column="1" bodyfile="Bolsa.cpp" bodystart="129" bodyend="185"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1a6567e62d4d1037ca2e2263ba7e22ea4e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::ad_ordem_compra</definition>
+        <argsstring>()</argsstring>
+        <name>ad_ordem_compra</name>
+        <briefdescription>
+<para>Adiciona uma ordem de compra ao vector de ordens de compra, com parametros definidos pelo utilizador. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="121" column="1" bodyfile="Bolsa.cpp" bodystart="188" bodyend="281"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1ab028d3fd8537fa65b25c7eece82dfabc" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::ad_ordem_venda</definition>
+        <argsstring>()</argsstring>
+        <name>ad_ordem_venda</name>
+        <briefdescription>
+<para>Adiciona uma ordem de venda ao vector de ordens de venda, com parametros definidos pelo utilizador. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="129" column="1" bodyfile="Bolsa.cpp" bodystart="283" bodyend="368"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1a8bcc217341ffe40e4f2b6d7454977d4d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::ad_cli</definition>
+        <argsstring>()</argsstring>
+        <name>ad_cli</name>
+        <briefdescription>
+<para>Adiciona um cliente ao vector de clientes, com parametros definidos pelo utilizador. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="137" column="1" bodyfile="Bolsa.cpp" bodystart="370" bodyend="403"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1ad96a358bf03c103f55b8139da8a0d61a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::listar_transacoes_cli</definition>
+        <argsstring>()</argsstring>
+        <name>listar_transacoes_cli</name>
+        <briefdescription>
+<para>Lista as transacoes de um cliente. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="145" column="1" bodyfile="Bolsa.cpp" bodystart="405" bodyend="451"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1aeac084d57bf9382c83516f1f0c043936" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::listar_transacoes_titulo</definition>
+        <argsstring>()</argsstring>
+        <name>listar_transacoes_titulo</name>
+        <briefdescription>
+<para>Lista todas as transacoes com um certo titulo. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="153" column="1" bodyfile="Bolsa.cpp" bodystart="453" bodyend="499"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1acb012fa60aa074fd861168ca3aedadd0" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::listar_transacoes_intervalo_de_tempo</definition>
+        <argsstring>()</argsstring>
+        <name>listar_transacoes_intervalo_de_tempo</name>
+        <briefdescription>
+<para>Lista transacoes por dia, mes ou ano. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="161" column="1" bodyfile="Bolsa.cpp" bodystart="501" bodyend="649"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1aba662f57e78213bee6de3db7c06c7293" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::listar_clientes</definition>
+        <argsstring>()</argsstring>
+        <name>listar_clientes</name>
+        <briefdescription>
+<para>Lista todos os clientes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="169" column="1" bodyfile="Bolsa.cpp" bodystart="651" bodyend="662"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1abd28d5b93c338a05deccf0adbac23ba1" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::listar_ordensVenda</definition>
+        <argsstring>()</argsstring>
+        <name>listar_ordensVenda</name>
+        <briefdescription>
+<para>Lista todas as de ordens venda. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="177" column="1" bodyfile="Bolsa.cpp" bodystart="664" bodyend="685"/>
+      </memberdef>
+      <memberdef kind="function" id="class_bolsa_1a419cf3df5db87b4925eb616af1180f88" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Bolsa::listar_ordensCompra</definition>
+        <argsstring>()</argsstring>
+        <name>listar_ordensCompra</name>
+        <briefdescription>
+<para>Lista todas as de ordens compra. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Bolsa.h" line="185" column="1" bodyfile="Bolsa.cpp" bodystart="687" bodyend="708"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>Classe que guarda os clientes, ordens de compra e venda, e transacoes da bolsa e as funcoes para manipulacao da mesma. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Bolsa.h" line="31" column="1" bodyfile="Bolsa.h" bodystart="31" bodyend="186"/>
+    <listofallmembers>
+      <member refid="class_bolsa_1a8bcc217341ffe40e4f2b6d7454977d4d" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>ad_cli</name></member>
+      <member refid="class_bolsa_1a6567e62d4d1037ca2e2263ba7e22ea4e" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>ad_ordem_compra</name></member>
+      <member refid="class_bolsa_1ab028d3fd8537fa65b25c7eece82dfabc" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>ad_ordem_venda</name></member>
+      <member refid="class_bolsa_1a79eb058719d17c21fab6c4b95db8c1b6" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>Bolsa</name></member>
+      <member refid="class_bolsa_1ab2f4b870140c3a4ff1f00d36249d4d02" prot="private" virt="non-virtual"><scope>Bolsa</scope><name>clientes</name></member>
+      <member refid="class_bolsa_1a12c0a8faf58b0803228ed17022c6ecfe" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>guarda_alteracoes</name></member>
+      <member refid="class_bolsa_1aabb97dba1ba1783fbe860058764c6a90" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>le_ficheiros</name></member>
+      <member refid="class_bolsa_1a2f295e1c0ddd43401056bde7d6a9bfde" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>le_ficheiros_cli</name></member>
+      <member refid="class_bolsa_1a57e3864eac22b2690e04fb8be39b5e58" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>le_ficheiros_ordc</name></member>
+      <member refid="class_bolsa_1ab0cd2fab3d7490d5d4a431e5cb1106e6" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>le_ficheiros_ordv</name></member>
+      <member refid="class_bolsa_1ab099261f63bff9e274b94bca96cbd2f4" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>le_ficheiros_tran</name></member>
+      <member refid="class_bolsa_1aba662f57e78213bee6de3db7c06c7293" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>listar_clientes</name></member>
+      <member refid="class_bolsa_1a419cf3df5db87b4925eb616af1180f88" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>listar_ordensCompra</name></member>
+      <member refid="class_bolsa_1abd28d5b93c338a05deccf0adbac23ba1" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>listar_ordensVenda</name></member>
+      <member refid="class_bolsa_1ad96a358bf03c103f55b8139da8a0d61a" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>listar_transacoes_cli</name></member>
+      <member refid="class_bolsa_1acb012fa60aa074fd861168ca3aedadd0" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>listar_transacoes_intervalo_de_tempo</name></member>
+      <member refid="class_bolsa_1aeac084d57bf9382c83516f1f0c043936" prot="public" virt="non-virtual"><scope>Bolsa</scope><name>listar_transacoes_titulo</name></member>
+      <member refid="class_bolsa_1aa4c6ea428efba6b3bc140396f96f2a7b" prot="private" virt="non-virtual"><scope>Bolsa</scope><name>ordensCompra</name></member>
+      <member refid="class_bolsa_1a738b783eb538cab704c35dc4d3e2f69d" prot="private" virt="non-virtual"><scope>Bolsa</scope><name>ordensVenda</name></member>
+      <member refid="class_bolsa_1a1e576bd3903d0840d52cd4a9ec947973" prot="private" virt="non-virtual"><scope>Bolsa</scope><name>transacoes</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

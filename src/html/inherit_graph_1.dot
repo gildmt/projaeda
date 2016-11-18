@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Cliente",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_cliente.html",tooltip="IMP: pode haver 2 cli com o mesmo nome, mas nao com o mesmo NIF. "];
+}

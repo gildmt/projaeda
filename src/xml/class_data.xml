@@ -1,0 +1,383 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_data" kind="class" language="C++" prot="public">
+    <compoundname>Data</compoundname>
+    <includes refid="_data_8h" local="no">Data.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_data_1a80d76fe2225d187fe8a20414478a2cb5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Data::ano</definition>
+        <argsstring></argsstring>
+        <name>ano</name>
+        <briefdescription>
+<para>The ano. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="33" column="1" bodyfile="Data.h" bodystart="33" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_1a8f77c5b515144e08b4fe26a8604f30ad" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Data::mes</definition>
+        <argsstring></argsstring>
+        <name>mes</name>
+        <briefdescription>
+<para>The mes. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="35" column="1" bodyfile="Data.h" bodystart="35" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_data_1ad76270db677fc394a4a7ded1c58de6d5" prot="private" static="no" mutable="no">
+        <type>int</type>
+        <definition>int Data::dia</definition>
+        <argsstring></argsstring>
+        <name>dia</name>
+        <briefdescription>
+<para>The dia. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="37" column="1" bodyfile="Data.h" bodystart="37" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_data_1ab19ff9142aad6f03e1a8be8284d9e8fa" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Data::Data</definition>
+        <argsstring>(int d, int m, int a)</argsstring>
+        <name>Data</name>
+        <param>
+          <type>int</type>
+          <declname>d</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>m</declname>
+        </param>
+        <param>
+          <type>int</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The int to process. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The int to process. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The int to process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="50" column="1" bodyfile="Data.cpp" bodystart="11" bodyend="15"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1af11f741cb7f587e2e495452a8905a22a" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Data::Data</definition>
+        <argsstring>()</argsstring>
+        <name>Data</name>
+        <briefdescription>
+<para>Default constructor. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="58" column="1" bodyfile="Data.cpp" bodystart="18" bodyend="18"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1aeddc16ade8663cd89c17624b80a67d4f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>Data::Data</definition>
+        <argsstring>(string data_str)</argsstring>
+        <name>Data</name>
+        <param>
+          <type>string</type>
+          <declname>data_str</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>data_str</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data string. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="68" column="1" bodyfile="Data.cpp" bodystart="20" bodyend="25"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1af16b870e20e2993ad585a01407efb8d5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Data::valida</definition>
+        <argsstring>(void) const</argsstring>
+        <name>valida</name>
+        <param>
+          <type>void</type>
+        </param>
+        <briefdescription>
+<para>Validas this object. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>True if it succeeds, false if it fails. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="78" column="1" bodyfile="Data.cpp" bodystart="53" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1aa9b7bdc683d9c493d903184e85f1e6b3" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Data::getDia</definition>
+        <argsstring>() const</argsstring>
+        <name>getDia</name>
+        <briefdescription>
+<para>Gets the dia. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The dia. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="88" column="1" bodyfile="Data.cpp" bodystart="27" bodyend="29"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1a1df6f5e1695c7cae56b9ee752a6895e8" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Data::getMes</definition>
+        <argsstring>() const</argsstring>
+        <name>getMes</name>
+        <briefdescription>
+<para>Gets the mes. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The mes. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="98" column="1" bodyfile="Data.cpp" bodystart="31" bodyend="33"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1a986bec10cbca338f08c9096d8e51efb5" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int Data::getAno</definition>
+        <argsstring>() const</argsstring>
+        <name>getAno</name>
+        <briefdescription>
+<para>Gets the ano. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The ano. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="108" column="1" bodyfile="Data.cpp" bodystart="35" bodyend="37"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1ae417bf0daa0cd736be446ebac4a18589" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Data::setDia</definition>
+        <argsstring>(const int &amp;d)</argsstring>
+        <name>setDia</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Sets a dia. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The int to process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="118" column="1" bodyfile="Data.cpp" bodystart="40" bodyend="42"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1a296b98388435fff3677ab220c7e070da" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Data::setMes</definition>
+        <argsstring>(const int &amp;m)</argsstring>
+        <name>setMes</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>m</declname>
+        </param>
+        <briefdescription>
+<para>Sets the mes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>m</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The int to process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="128" column="1" bodyfile="Data.cpp" bodystart="44" bodyend="46"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1a84dbaee286db7c5c6039ea97d6293d53" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void Data::setAno</definition>
+        <argsstring>(const int &amp;a)</argsstring>
+        <name>setAno</name>
+        <param>
+          <type>const int &amp;</type>
+          <declname>a</declname>
+        </param>
+        <briefdescription>
+<para>Sets an ano. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>a</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The int to process. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="138" column="1" bodyfile="Data.cpp" bodystart="49" bodyend="51"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1ae4c00338b1d73e12dc177b48d7b04d89" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Data::operator==</definition>
+        <argsstring>(const Data &amp;d)</argsstring>
+        <name>operator==</name>
+        <param>
+          <type>const <ref refid="class_data" kindref="compound">Data</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Equality operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_data" kindref="compound">Data</ref> to process.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the parameters are considered equivalent. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="150" column="1" bodyfile="Data.cpp" bodystart="79" bodyend="85"/>
+      </memberdef>
+      <memberdef kind="function" id="class_data_1a5f305274d7f60e8f1208dbd623ed4e71" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>bool</type>
+        <definition>bool Data::operator&lt;</definition>
+        <argsstring>(const Data &amp;d)</argsstring>
+        <name>operator&lt;</name>
+        <param>
+          <type>const <ref refid="class_data" kindref="compound">Data</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Less-than comparison operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_data" kindref="compound">Data</ref> to process.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>True if the first parameter is less than the second. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="162" column="1" bodyfile="Data.cpp" bodystart="87" bodyend="107"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_data_1a610a7c48e852afcc4874e1d5f0ed8f96" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend ostream &amp;</type>
+        <definition>ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;os, const Data &amp;d)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>os</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_data" kindref="compound">Data</ref> &amp;</type>
+          <declname>d</declname>
+        </param>
+        <briefdescription>
+<para>Stream insertion operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">os</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The operating system. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>d</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The <ref refid="class_data" kindref="compound">Data</ref> to process.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shifted result. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Data.h" line="175" column="1" bodyfile="Data.cpp" bodystart="109" bodyend="115"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A data. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Data.h" line="30" column="1" bodyfile="Data.h" bodystart="30" bodyend="176"/>
+    <listofallmembers>
+      <member refid="class_data_1a80d76fe2225d187fe8a20414478a2cb5" prot="private" virt="non-virtual"><scope>Data</scope><name>ano</name></member>
+      <member refid="class_data_1ab19ff9142aad6f03e1a8be8284d9e8fa" prot="public" virt="non-virtual"><scope>Data</scope><name>Data</name></member>
+      <member refid="class_data_1af11f741cb7f587e2e495452a8905a22a" prot="public" virt="non-virtual"><scope>Data</scope><name>Data</name></member>
+      <member refid="class_data_1aeddc16ade8663cd89c17624b80a67d4f" prot="public" virt="non-virtual"><scope>Data</scope><name>Data</name></member>
+      <member refid="class_data_1ad76270db677fc394a4a7ded1c58de6d5" prot="private" virt="non-virtual"><scope>Data</scope><name>dia</name></member>
+      <member refid="class_data_1a986bec10cbca338f08c9096d8e51efb5" prot="public" virt="non-virtual"><scope>Data</scope><name>getAno</name></member>
+      <member refid="class_data_1aa9b7bdc683d9c493d903184e85f1e6b3" prot="public" virt="non-virtual"><scope>Data</scope><name>getDia</name></member>
+      <member refid="class_data_1a1df6f5e1695c7cae56b9ee752a6895e8" prot="public" virt="non-virtual"><scope>Data</scope><name>getMes</name></member>
+      <member refid="class_data_1a8f77c5b515144e08b4fe26a8604f30ad" prot="private" virt="non-virtual"><scope>Data</scope><name>mes</name></member>
+      <member refid="class_data_1a5f305274d7f60e8f1208dbd623ed4e71" prot="public" virt="non-virtual"><scope>Data</scope><name>operator&lt;</name></member>
+      <member refid="class_data_1a610a7c48e852afcc4874e1d5f0ed8f96" prot="public" virt="non-virtual"><scope>Data</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_data_1ae4c00338b1d73e12dc177b48d7b04d89" prot="public" virt="non-virtual"><scope>Data</scope><name>operator==</name></member>
+      <member refid="class_data_1a84dbaee286db7c5c6039ea97d6293d53" prot="public" virt="non-virtual"><scope>Data</scope><name>setAno</name></member>
+      <member refid="class_data_1ae417bf0daa0cd736be446ebac4a18589" prot="public" virt="non-virtual"><scope>Data</scope><name>setDia</name></member>
+      <member refid="class_data_1a296b98388435fff3677ab220c7e070da" prot="public" virt="non-virtual"><scope>Data</scope><name>setMes</name></member>
+      <member refid="class_data_1af16b870e20e2993ad585a01407efb8d5" prot="public" virt="non-virtual"><scope>Data</scope><name>valida</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

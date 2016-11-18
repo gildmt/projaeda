@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="_ordem_compra_8cpp" kind="file" language="C++">
+    <compoundname>OrdemCompra.cpp</compoundname>
+    <includes refid="_ordem_compra_8h" local="yes">OrdemCompra.h</includes>
+    <incdepgraph>
+      <node id="211">
+        <label>iomanip</label>
+      </node>
+      <node id="203">
+        <label>OrdemCompra.h</label>
+        <link refid="_ordem_compra_8h"/>
+        <childnode refid="204" relation="include">
+        </childnode>
+        <childnode refid="212" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+      </node>
+      <node id="213">
+        <label>windows.h</label>
+      </node>
+      <node id="209">
+        <label>Data.h</label>
+        <link refid="_data_8h"/>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="210" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="211" relation="include">
+        </childnode>
+      </node>
+      <node id="205">
+        <label>string</label>
+      </node>
+      <node id="208">
+        <label>fstream</label>
+      </node>
+      <node id="207">
+        <label>Cliente.h</label>
+        <link refid="_cliente_8h"/>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+      </node>
+      <node id="214">
+        <label>vector</label>
+      </node>
+      <node id="212">
+        <label>Utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="213" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="208" relation="include">
+        </childnode>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="214" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="204">
+        <label>Ordem.h</label>
+        <link refid="_ordem_8h"/>
+        <childnode refid="205" relation="include">
+        </childnode>
+        <childnode refid="206" relation="include">
+        </childnode>
+        <childnode refid="207" relation="include">
+        </childnode>
+        <childnode refid="209" relation="include">
+        </childnode>
+      </node>
+      <node id="210">
+        <label>sstream</label>
+      </node>
+      <node id="206">
+        <label>iostream</label>
+      </node>
+      <node id="202">
+        <label>OrdemCompra.cpp</label>
+        <link refid="_ordem_compra_8cpp"/>
+        <childnode refid="203" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_ordem_compra_8cpp_1af627689c195b0dafadd1ac1ddb6f6cd7" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>ostream &amp;</type>
+        <definition>ostream&amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;out, const OrdemCompra &amp;ordem)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_ordem_compra" kindref="compound">OrdemCompra</ref> &amp;</type>
+          <declname>ordem</declname>
+        </param>
+        <briefdescription>
+        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.cpp" line="25" column="1" bodyfile="OrdemCompra.cpp" bodystart="25" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment"><sp/>*<sp/>OrdemCompra.cpp</highlight></codeline>
+<codeline lineno="3"><highlight class="comment"><sp/>*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment"><sp/>*<sp/><sp/>Created<sp/>on:<sp/>17/10/2016</highlight></codeline>
+<codeline lineno="5"><highlight class="comment"><sp/>*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Gil<sp/>Teixeira<sp/>&amp;<sp/>Paulo<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment"><sp/>*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_ordem_compra_8h" kindref="compound">OrdemCompra.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"><ref refid="class_ordem_compra_1a98bff4c9185593d197e72a7f14e5856f" kindref="member">OrdemCompra::OrdemCompra</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>titulo,<sp/><ref refid="class_data" kindref="compound">Data</ref><sp/>data,<sp/></highlight><highlight class="keywordtype">long</highlight><highlight class="normal"><sp/>nif_cliente,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>precoMax,<sp/></highlight><highlight class="keywordtype">float</highlight><highlight class="normal"><sp/>valorMaxGastar)<sp/>:<sp/><ref refid="class_ordem" kindref="compound">Ordem</ref>(titulo,<sp/>data,<sp/>nif_cliente)<sp/>{</highlight></codeline>
+<codeline lineno="11"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;precoMax=precoMax;</highlight></codeline>
+<codeline lineno="12"><highlight class="normal"><sp/><sp/><sp/><sp/>this-&gt;valorMaxGastar=valorMaxGastar;</highlight></codeline>
+<codeline lineno="13"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="class_ordem_compra_1ae4c663bb3b6d507fabc7d02fa244cd56" kindref="member">OrdemCompra::guardar</ref>(ofstream<sp/>&amp;<sp/>out)</highlight><highlight class="keyword"><sp/>const</highlight><highlight class="normal">{</highlight></codeline>
+<codeline lineno="17"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/><ref refid="class_ordem_1af6d06b4250735ae531bdcef5fa332f02" kindref="member">nif_cliente</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><ref refid="class_ordem_1a9f4dbc2966e98dcbd7e300ae346d8535" kindref="member">data</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/><ref refid="class_ordem_1a0773861bd9fb956d5ec62f2ef1de658b" kindref="member">titulo</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>precoMax<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>;<sp/>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/>valorMaxGastar<sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="23"><highlight class="normal">}</highlight></codeline>
+<codeline lineno="24"><highlight class="normal"></highlight></codeline>
+<codeline lineno="25"><highlight class="normal">ostream&amp;<sp/><ref refid="_ordem_compra_8cpp_1af627689c195b0dafadd1ac1ddb6f6cd7" kindref="member">operator&lt;&lt;</ref>(ostream&amp;<sp/>out,<sp/></highlight><highlight class="keyword">const</highlight><highlight class="normal"><sp/><ref refid="class_ordem_compra" kindref="compound">OrdemCompra</ref><sp/>&amp;<sp/>ordem)</highlight></codeline>
+<codeline lineno="26"><highlight class="normal">{</highlight></codeline>
+<codeline lineno="27"><highlight class="normal"><sp/><sp/><sp/><sp/>out<sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1ad58a1fbfc85c7e4790fc55e654f50221" kindref="member">TAB</ref><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>right<sp/>&lt;&lt;<sp/>setfill(</highlight><highlight class="charliteral">&apos;0&apos;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>setw(9)<sp/>&lt;&lt;<sp/>ordem.<ref refid="class_ordem_1af6d06b4250735ae531bdcef5fa332f02" kindref="member">nif_cliente</ref><sp/>&lt;&lt;<sp/>setfill(</highlight><highlight class="charliteral">&apos;<sp/>&apos;</highlight><highlight class="normal">)<sp/>&lt;&lt;<sp/>left</highlight></codeline>
+<codeline lineno="28"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(12)<sp/>&lt;&lt;<sp/>ordem.<ref refid="class_ordem_1a9f4dbc2966e98dcbd7e300ae346d8535" kindref="member">data</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref></highlight></codeline>
+<codeline lineno="29"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(13)<sp/>&lt;&lt;<sp/>ordem.<ref refid="class_ordem_1a0773861bd9fb956d5ec62f2ef1de658b" kindref="member">titulo</ref><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref></highlight></codeline>
+<codeline lineno="30"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>right<sp/>&lt;&lt;<sp/>setw(12)<sp/>&lt;&lt;<sp/>ordem.precoMax<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref></highlight></codeline>
+<codeline lineno="31"><highlight class="normal"><sp/><sp/><sp/><sp/><sp/><sp/><sp/><sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/>setw(12)<sp/>&lt;&lt;<sp/>ordem.valorMaxGastar<sp/>&lt;&lt;<sp/></highlight><highlight class="stringliteral">&quot;<sp/>&quot;</highlight><highlight class="normal"><sp/>&lt;&lt;<sp/><ref refid="_utils_8h_1a13fe58de93680e49555647d0c8abcd0a" kindref="member">BARRA</ref><sp/>&lt;&lt;<sp/>endl;</highlight></codeline>
+<codeline lineno="32"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight></codeline>
+<codeline lineno="33"><highlight class="normal"><sp/><sp/><sp/><sp/></highlight><highlight class="keywordflow">return</highlight><highlight class="normal"><sp/>out;</highlight></codeline>
+<codeline lineno="34"><highlight class="normal">}</highlight></codeline>
+    </programlisting>
+    <location file="OrdemCompra.cpp"/>
+  </compounddef>
+</doxygen>

@@ -23,27 +23,32 @@ int verfica_fich(string & fich_veri, string tipo_fich){
 			if (!getline(cin, fich_veri)){
 				return 1;                          //control+z logo sai
 			}
-			acabatxt(fich_veri);
+			acabalog(fich_veri);
 			ficheiro.open(fich_veri);
 			if (ficheiro)
 			{
-				bool fichVazio = fich_vazio(ficheiro);
-				string tipo_fich_teste;                          //verfica 1 linha ficheiro
-				getline(ficheiro, tipo_fich_teste, ':');
-				if (tipo_fich_teste != tipo_fich || !fichVazio)  // aceita ficheiros vazio 
-				{
-					ficheiro.close();
-					throw FicheiroInvalido(tipo_fich);      
-					
+				if (!fich_vazio(ficheiro)){
+					string tipo_fich_teste;                          //verfica 1 linha ficheiro
+					getline(ficheiro, tipo_fich_teste, ':');
+					if (tipo_fich_teste != tipo_fich)  
+					{
+						ficheiro.close();
+						throw FicheiroInvalido(tipo_fich);
+					}
 				}
-
+				else {
+					ficheiro.open(fich_veri, fstream::out);
+					ficheiro << tipo_fich << " : 0";
+				}
 				ficheiro.close();
 				break;
 			}
 			else throw FicheiroInexistente(tipo_fich);
 		}
 		catch (FicheiroInexistente fich_inex){
-			
+			ficheiro.open(fich_veri, fstream::out);
+			ficheiro << tipo_fich << " : 0";
+			ficheiro.close();
 			cout << fich_inex;
 			break;
 		}
@@ -61,13 +66,13 @@ int infoInicial(string & fichClientes, string & fichTransacoes, string & fichOrd
 	string tipo_fich;
 	
 
-	if (verfica_fich(fichClientes, "Clientes"))
+	if (verfica_fich(fichClientes, "Clientes "))
 		return 1;
-	if (verfica_fich(fichTransacoes, "Transacoes"))
+	if (verfica_fich(fichTransacoes, "Transacoes "))
 		return 1;
-	if (verfica_fich(fichOrdensVenda, "Ordens de Venda"))
+	if (verfica_fich(fichOrdensVenda, "Ordens de Venda "))
 		return 1;
-	if (verfica_fich(fichOrdensCompra, "Ordens de Compra"))
+	if (verfica_fich(fichOrdensCompra, "Ordens de Compra "))
 		return 1;
 	
 	espera_input();

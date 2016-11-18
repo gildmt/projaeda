@@ -1,0 +1,304 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_ordem_compra" kind="class" language="C++" prot="public">
+    <compoundname>OrdemCompra</compoundname>
+    <basecompoundref refid="class_ordem" prot="public" virt="non-virtual">Ordem</basecompoundref>
+    <includes refid="_ordem_compra_8h" local="no">OrdemCompra.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ordem_compra_1a626f57b855dcf1694a3a016dfa0ca5e3" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float OrdemCompra::precoMax</definition>
+        <argsstring></argsstring>
+        <name>precoMax</name>
+        <briefdescription>
+<para>The preco maximum. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="34" column="1" bodyfile="OrdemCompra.h" bodystart="34" bodyend="-1"/>
+      </memberdef>
+      <memberdef kind="variable" id="class_ordem_compra_1ad000c0474f684f55fcbd98c9785dcaa7" prot="private" static="no" mutable="no">
+        <type>float</type>
+        <definition>float OrdemCompra::valorMaxGastar</definition>
+        <argsstring></argsstring>
+        <name>valorMaxGastar</name>
+        <briefdescription>
+<para>The valor maximum gastar. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="36" column="1" bodyfile="OrdemCompra.h" bodystart="36" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ordem_compra_1a98bff4c9185593d197e72a7f14e5856f" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>OrdemCompra::OrdemCompra</definition>
+        <argsstring>(string titulo, Data data, long nif_cliente, float precoMax, float valorMaxGastar)</argsstring>
+        <name>OrdemCompra</name>
+        <param>
+          <type>string</type>
+          <declname>titulo</declname>
+        </param>
+        <param>
+          <type><ref refid="class_data" kindref="compound">Data</ref></type>
+          <declname>data</declname>
+        </param>
+        <param>
+          <type>long</type>
+          <declname>nif_cliente</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>precoMax</declname>
+        </param>
+        <param>
+          <type>float</type>
+          <declname>valorMaxGastar</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>titulo</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The titulo. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>data</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The data. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>nif_cliente</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The nif cliente. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>precoMax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The preco maximum. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>valorMaxGastar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The valor maximum gastar. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="51" column="1" bodyfile="OrdemCompra.cpp" bodystart="10" bodyend="13"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ordem_compra_1a2c4117480fead3d38c34e7491007503d" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float OrdemCompra::getPrecoMax</definition>
+        <argsstring>() const</argsstring>
+        <name>getPrecoMax</name>
+        <briefdescription>
+<para>Gets preco maximum. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The calculated preco maximum. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="61" column="1" bodyfile="OrdemCompra.h" bodystart="61" bodyend="63"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ordem_compra_1aab6b393722db7f13fa0c37eddb1b4b04" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrdemCompra::setPrecoMax</definition>
+        <argsstring>(float precoMax)</argsstring>
+        <name>setPrecoMax</name>
+        <param>
+          <type>float</type>
+          <declname>precoMax</declname>
+        </param>
+        <briefdescription>
+<para>Sets preco maximum. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>precoMax</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The preco maximum. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="73" column="1" bodyfile="OrdemCompra.h" bodystart="73" bodyend="75"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ordem_compra_1a29931277d9029de1cb8a176694f38085" prot="public" static="no" const="yes" explicit="no" inline="yes" virt="non-virtual">
+        <type>float</type>
+        <definition>float OrdemCompra::getValorMaxGastar</definition>
+        <argsstring>() const</argsstring>
+        <name>getValorMaxGastar</name>
+        <briefdescription>
+<para>Gets valor maximum gastar. </para>        </briefdescription>
+        <detaileddescription>
+<para><simplesect kind="return"><para>The valor maximum gastar. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="85" column="1" bodyfile="OrdemCompra.h" bodystart="85" bodyend="87"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ordem_compra_1ada9283bb3eda59fd0f6b10aa7e2b86c2" prot="public" static="no" const="no" explicit="no" inline="yes" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrdemCompra::setValorMaxGastar</definition>
+        <argsstring>(float valorMaxGastar)</argsstring>
+        <name>setValorMaxGastar</name>
+        <param>
+          <type>float</type>
+          <declname>valorMaxGastar</declname>
+        </param>
+        <briefdescription>
+<para>Sets valor maximum gastar. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>valorMaxGastar</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The valor maximum gastar. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="97" column="1" bodyfile="OrdemCompra.h" bodystart="97" bodyend="99"/>
+      </memberdef>
+      <memberdef kind="function" id="class_ordem_compra_1ae4c663bb3b6d507fabc7d02fa244cd56" prot="public" static="no" const="yes" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void OrdemCompra::guardar</definition>
+        <argsstring>(ofstream &amp;out) const</argsstring>
+        <name>guardar</name>
+        <param>
+          <type>ofstream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <briefdescription>
+<para>Guardars the given out. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The out. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="109" column="1" bodyfile="OrdemCompra.cpp" bodystart="16" bodyend="23"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_ordem_compra_1af2f3323b475ba777c890c63648d24e5d" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend ostream &amp;</type>
+        <definition>ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;out, const OrdemCompra &amp;ordem)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_ordem_compra" kindref="compound">OrdemCompra</ref> &amp;</type>
+          <declname>ordem</declname>
+        </param>
+        <briefdescription>
+<para>Stream insertion operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The out. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>ordem</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The ordem.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shifted result. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="OrdemCompra.h" line="122" column="1" bodyfile="OrdemCompra.cpp" bodystart="25" bodyend="34"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>An ordem compra. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <inheritancegraph>
+      <node id="18">
+        <label>Ordem</label>
+        <link refid="class_ordem"/>
+      </node>
+      <node id="17">
+        <label>OrdemCompra</label>
+        <link refid="class_ordem_compra"/>
+        <childnode refid="18" relation="public-inheritance">
+        </childnode>
+      </node>
+    </inheritancegraph>
+    <collaborationgraph>
+      <node id="20">
+        <label>Ordem</label>
+        <link refid="class_ordem"/>
+        <childnode refid="21" relation="usage">
+          <edgelabel>data</edgelabel>
+        </childnode>
+      </node>
+      <node id="19">
+        <label>OrdemCompra</label>
+        <link refid="class_ordem_compra"/>
+        <childnode refid="20" relation="public-inheritance">
+        </childnode>
+      </node>
+      <node id="21">
+        <label>Data</label>
+        <link refid="class_data"/>
+      </node>
+    </collaborationgraph>
+    <location file="OrdemCompra.h" line="31" column="1" bodyfile="OrdemCompra.h" bodystart="31" bodyend="123"/>
+    <listofallmembers>
+      <member refid="class_ordem_1a9f4dbc2966e98dcbd7e300ae346d8535" prot="protected" virt="non-virtual"><scope>OrdemCompra</scope><name>data</name></member>
+      <member refid="class_ordem_1ac20855509d9f35a85b1a89f30e2a4cfc" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>getData</name></member>
+      <member refid="class_ordem_1a637e9cd84bc0702bdb3d91e229076f43" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>getNif</name></member>
+      <member refid="class_ordem_compra_1a2c4117480fead3d38c34e7491007503d" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>getPrecoMax</name></member>
+      <member refid="class_ordem_1a1382c1e817af7abe07b66be2f3cf4e8d" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>getTitulo</name></member>
+      <member refid="class_ordem_compra_1a29931277d9029de1cb8a176694f38085" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>getValorMaxGastar</name></member>
+      <member refid="class_ordem_compra_1ae4c663bb3b6d507fabc7d02fa244cd56" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>guardar</name></member>
+      <member refid="class_ordem_1af6d06b4250735ae531bdcef5fa332f02" prot="protected" virt="non-virtual"><scope>OrdemCompra</scope><name>nif_cliente</name></member>
+      <member refid="class_ordem_compra_1af2f3323b475ba777c890c63648d24e5d" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_ordem_1af1b393aaaec4108c394ee099b8230a10" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>Ordem</name></member>
+      <member refid="class_ordem_compra_1a98bff4c9185593d197e72a7f14e5856f" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>OrdemCompra</name></member>
+      <member refid="class_ordem_compra_1a626f57b855dcf1694a3a016dfa0ca5e3" prot="private" virt="non-virtual"><scope>OrdemCompra</scope><name>precoMax</name></member>
+      <member refid="class_ordem_compra_1aab6b393722db7f13fa0c37eddb1b4b04" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>setPrecoMax</name></member>
+      <member refid="class_ordem_1aa8e4bc7713526fe31d8129465e7ff72a" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>setTitulo</name></member>
+      <member refid="class_ordem_compra_1ada9283bb3eda59fd0f6b10aa7e2b86c2" prot="public" virt="non-virtual"><scope>OrdemCompra</scope><name>setValorMaxGastar</name></member>
+      <member refid="class_ordem_1a0773861bd9fb956d5ec62f2ef1de658b" prot="protected" virt="non-virtual"><scope>OrdemCompra</scope><name>titulo</name></member>
+      <member refid="class_ordem_compra_1ad000c0474f684f55fcbd98c9785dcaa7" prot="private" virt="non-virtual"><scope>OrdemCompra</scope><name>valorMaxGastar</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>

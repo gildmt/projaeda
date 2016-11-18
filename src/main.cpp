@@ -15,22 +15,20 @@
 #include <vector>
 
 
-//#include "Cliente.h"
-
 using namespace std;
 
 string fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra;
 
 int main(){
 	//v final
-	//if (infoInicial(fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra))
-		//return 1;
+	if (infoInicial(fichClientes, fichTransacoes, fichOrdensVenda, fichOrdensCompra))
+		return 1;
 
 	//v para testes
-	fichClientes = "clientes.log";
-	fichTransacoes = "transacoes.log";
-	fichOrdensVenda = "ordensvenda.log";
-	fichOrdensCompra = "ordenscompra.log";
+	//fichClientes = "clientes.log";
+	//fichTransacoes = "transacoes.log";
+	//fichOrdensVenda = "ordensvenda.log";
+	//fichOrdensCompra = "ordenscompra.log";
 
 	// cria bolsa
 	Bolsa bolsa_de_valores;

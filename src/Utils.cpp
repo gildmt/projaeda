@@ -104,6 +104,8 @@ long leNif() {
 	return -1;
 }
 
+
+// esta funcao apenas aceira titulo com apenas uma palavra!
 string leTitulo() {
 	string input;
 	string titulo;
@@ -123,13 +125,9 @@ string leTitulo() {
 void espera_input()
 {
 	cout << endl;
-	cout << TAB << "Pressione Enter para continuar.";
+	cout << TAB << "Pressione Enter para continuar...";
 	cin.ignore(numeric_limits<streamsize>::max(), '\n');
-	//cin.clear();
-	//cin.ignore(numeric_limits<streamsize>::max(), '\n');
-	//string s;
-	//getline(cin, s);
-	//_getch;
+
 }
 
 Data getData() {
@@ -147,9 +145,9 @@ bool fich_vazio(fstream& pFile)
 	return pFile.peek() == fstream::traits_type::eof();
 }
 
-void acabatxt(string &str)
+void acabalog(string &str)
 {
-	string sufixo = ".txt";
+	string sufixo = ".log";
 	if (str.size() < sufixo.size())
 		str = str + sufixo;
 

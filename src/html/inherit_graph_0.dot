@@ -1,0 +1,7 @@
+digraph "Graphical Class Hierarchy"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node0 [label="Bolsa",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_bolsa.html",tooltip="Classe que guarda os clientes, ordens de compra e venda, e transacoes da bolsa e as funcoes para mani..."];
+}

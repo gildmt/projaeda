@@ -1,0 +1,225 @@
+\hypertarget{class_transacao}{}\section{Transacao Class Reference}
+\label{class_transacao}\index{Transacao@{Transacao}}
+
+
+Classe que representa uma transacao na bolsa de valores.  
+
+
+
+
+{\ttfamily \#include $<$Transacao.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_transacao_a85413a667a5e4e7632c7926900d3d517}{Transacao} (string titulo, float preco\+\_\+acao, int num\+\_\+acoes, \hyperlink{class_data}{Data} data, long cliente\+\_\+v, long cliente\+\_\+c)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+\hyperlink{class_transacao_adad7dd2c36a20c16e0ac40e3a5822650}{Transacao} (ifstream \&in)
+\begin{DoxyCompactList}\small\item\em Constructor que le uma linha de um ficheiro de texto. \end{DoxyCompactList}\item 
+bool \hyperlink{class_transacao_a99deb0eadbb36741646610299c2fecad}{operator$<$} (const \hyperlink{class_transacao}{Transacao} \&tr) const
+\begin{DoxyCompactList}\small\item\em Compara as transacoes por data. \end{DoxyCompactList}\item 
+string \hyperlink{class_transacao_af48d21e7643548e9b8ff9ee9d1cd39c8}{get\+Titulo} ()
+\begin{DoxyCompactList}\small\item\em Retorna o titulo da acao da transacao. \end{DoxyCompactList}\item 
+float \hyperlink{class_transacao_a04806fca6de35ac9f57044c2bd2c39b3}{get\+Preco\+\_\+acao} ()
+\begin{DoxyCompactList}\small\item\em Retorna o preco por acao da transacao. \end{DoxyCompactList}\item 
+int \hyperlink{class_transacao_af52a47c91fe23258ddd212a78f044297}{get\+Num\+\_\+acoes} ()
+\begin{DoxyCompactList}\small\item\em Retorna o numero de acoes. \end{DoxyCompactList}\item 
+\hyperlink{class_data}{Data} \hyperlink{class_transacao_a94162db1ef8a17eee755c3a3c1d7744b}{get\+Data} ()
+\begin{DoxyCompactList}\small\item\em Retorna a data da transacao. \end{DoxyCompactList}\item 
+long \hyperlink{class_transacao_a67521a6dea9a82ca2d7d3821a10a6e0d}{get\+Cliente\+\_\+v} ()
+\begin{DoxyCompactList}\small\item\em Retorna o N\+IF do cliente que vende as acoes. \end{DoxyCompactList}\item 
+long \hyperlink{class_transacao_ad896abaa081d1407b69f8bd9a60b107c}{get\+Cliente\+\_\+c} ()
+\begin{DoxyCompactList}\small\item\em Retorna o N\+IF do cliente que compra as acoes. \end{DoxyCompactList}\item 
+void \hyperlink{class_transacao_aa4b2e7563ee4cb46bea35ea5b8d5f96a}{guardar} (ofstream \&out) const
+\begin{DoxyCompactList}\small\item\em Escreve num ficheiro que guarda as informacoes das transacoes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+ostream \& \hyperlink{class_transacao_a1b84445ef2674a7af30a1d313844766c}{operator$<$$<$} (ostream \&out, const \hyperlink{class_transacao}{Transacao} \&transacao)
+\begin{DoxyCompactList}\small\item\em Operador para imprimir uma transacao. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Classe que representa uma transacao na bolsa de valores. 
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_transacao_a85413a667a5e4e7632c7926900d3d517}{}\label{class_transacao_a85413a667a5e4e7632c7926900d3d517} 
+\index{Transacao@{Transacao}!Transacao@{Transacao}}
+\index{Transacao@{Transacao}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{Transacao()}{Transacao()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily Transacao\+::\+Transacao (\begin{DoxyParamCaption}\item[{string}]{titulo,  }\item[{float}]{preco\+\_\+acao,  }\item[{int}]{num\+\_\+acoes,  }\item[{\hyperlink{class_data}{Data}}]{data,  }\item[{long}]{cliente\+\_\+v,  }\item[{long}]{cliente\+\_\+c }\end{DoxyParamCaption})}
+
+
+
+Constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em titulo} & O titulo da acao da transacao. \\
+\hline
+{\em preco\+\_\+acao} & O preso da acao. \\
+\hline
+{\em num\+\_\+acoes} & Numero de acoes da transacao. \\
+\hline
+{\em data} & A data da transacao. \\
+\hline
+{\em cliente\+\_\+v} & O N\+IF do cliente que vende as acoes. \\
+\hline
+{\em cliente\+\_\+c} & O N\+IF do cliente que compra as acoes. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_transacao_adad7dd2c36a20c16e0ac40e3a5822650}{}\label{class_transacao_adad7dd2c36a20c16e0ac40e3a5822650} 
+\index{Transacao@{Transacao}!Transacao@{Transacao}}
+\index{Transacao@{Transacao}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{Transacao()}{Transacao()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily Transacao\+::\+Transacao (\begin{DoxyParamCaption}\item[{ifstream \&}]{in }\end{DoxyParamCaption})}
+
+
+
+Constructor que le uma linha de um ficheiro de texto. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em in} & Ficheiro de texto. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_transacao_ad896abaa081d1407b69f8bd9a60b107c}{}\label{class_transacao_ad896abaa081d1407b69f8bd9a60b107c} 
+\index{Transacao@{Transacao}!get\+Cliente\+\_\+c@{get\+Cliente\+\_\+c}}
+\index{get\+Cliente\+\_\+c@{get\+Cliente\+\_\+c}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{get\+Cliente\+\_\+c()}{getCliente\_c()}}
+{\footnotesize\ttfamily long Transacao\+::get\+Cliente\+\_\+c (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o N\+IF do cliente que compra as acoes. 
+
+\begin{DoxyReturn}{Returns}
+O N\+IF do cliente que vende as acoes. 
+\end{DoxyReturn}
+\hypertarget{class_transacao_a67521a6dea9a82ca2d7d3821a10a6e0d}{}\label{class_transacao_a67521a6dea9a82ca2d7d3821a10a6e0d} 
+\index{Transacao@{Transacao}!get\+Cliente\+\_\+v@{get\+Cliente\+\_\+v}}
+\index{get\+Cliente\+\_\+v@{get\+Cliente\+\_\+v}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{get\+Cliente\+\_\+v()}{getCliente\_v()}}
+{\footnotesize\ttfamily long Transacao\+::get\+Cliente\+\_\+v (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o N\+IF do cliente que vende as acoes. 
+
+\begin{DoxyReturn}{Returns}
+O N\+IF do cliente que vende as acoes. 
+\end{DoxyReturn}
+\hypertarget{class_transacao_a94162db1ef8a17eee755c3a3c1d7744b}{}\label{class_transacao_a94162db1ef8a17eee755c3a3c1d7744b} 
+\index{Transacao@{Transacao}!get\+Data@{get\+Data}}
+\index{get\+Data@{get\+Data}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{get\+Data()}{getData()}}
+{\footnotesize\ttfamily \hyperlink{class_data}{Data} Transacao\+::get\+Data (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna a data da transacao. 
+
+\begin{DoxyReturn}{Returns}
+The data. 
+\end{DoxyReturn}
+\hypertarget{class_transacao_af52a47c91fe23258ddd212a78f044297}{}\label{class_transacao_af52a47c91fe23258ddd212a78f044297} 
+\index{Transacao@{Transacao}!get\+Num\+\_\+acoes@{get\+Num\+\_\+acoes}}
+\index{get\+Num\+\_\+acoes@{get\+Num\+\_\+acoes}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{get\+Num\+\_\+acoes()}{getNum\_acoes()}}
+{\footnotesize\ttfamily int Transacao\+::get\+Num\+\_\+acoes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o numero de acoes. 
+
+\begin{DoxyReturn}{Returns}
+O numero de acoes. 
+\end{DoxyReturn}
+\hypertarget{class_transacao_a04806fca6de35ac9f57044c2bd2c39b3}{}\label{class_transacao_a04806fca6de35ac9f57044c2bd2c39b3} 
+\index{Transacao@{Transacao}!get\+Preco\+\_\+acao@{get\+Preco\+\_\+acao}}
+\index{get\+Preco\+\_\+acao@{get\+Preco\+\_\+acao}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{get\+Preco\+\_\+acao()}{getPreco\_acao()}}
+{\footnotesize\ttfamily float Transacao\+::get\+Preco\+\_\+acao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o preco por acao da transacao. 
+
+\begin{DoxyReturn}{Returns}
+O preco por acao da transacao. 
+\end{DoxyReturn}
+\hypertarget{class_transacao_af48d21e7643548e9b8ff9ee9d1cd39c8}{}\label{class_transacao_af48d21e7643548e9b8ff9ee9d1cd39c8} 
+\index{Transacao@{Transacao}!get\+Titulo@{get\+Titulo}}
+\index{get\+Titulo@{get\+Titulo}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{get\+Titulo()}{getTitulo()}}
+{\footnotesize\ttfamily string Transacao\+::get\+Titulo (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Retorna o titulo da acao da transacao. 
+
+\begin{DoxyReturn}{Returns}
+O titulo da acao da transacao. 
+\end{DoxyReturn}
+\hypertarget{class_transacao_aa4b2e7563ee4cb46bea35ea5b8d5f96a}{}\label{class_transacao_aa4b2e7563ee4cb46bea35ea5b8d5f96a} 
+\index{Transacao@{Transacao}!guardar@{guardar}}
+\index{guardar@{guardar}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{guardar()}{guardar()}}
+{\footnotesize\ttfamily void Transacao\+::guardar (\begin{DoxyParamCaption}\item[{ofstream \&}]{out }\end{DoxyParamCaption}) const}
+
+
+
+Escreve num ficheiro que guarda as informacoes das transacoes. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Ficheiro em que se escreve as informacoes. \\
+\hline
+\end{DoxyParams}
+\hypertarget{class_transacao_a99deb0eadbb36741646610299c2fecad}{}\label{class_transacao_a99deb0eadbb36741646610299c2fecad} 
+\index{Transacao@{Transacao}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Transacao\+::operator$<$ (\begin{DoxyParamCaption}\item[{const \hyperlink{class_transacao}{Transacao} \&}]{tr }\end{DoxyParamCaption}) const}
+
+
+
+Compara as transacoes por data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tr} & Segunda transacao a comparar.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Verdade se a data da primeira transacao for menor que da segunda. 
+\end{DoxyReturn}
+
+
+\subsection{Friends And Related Function Documentation}
+\hypertarget{class_transacao_a1b84445ef2674a7af30a1d313844766c}{}\label{class_transacao_a1b84445ef2674a7af30a1d313844766c} 
+\index{Transacao@{Transacao}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!Transacao@{Transacao}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily ostream \& operator$<$$<$ (\begin{DoxyParamCaption}\item[{ostream \&}]{out,  }\item[{const \hyperlink{class_transacao}{Transacao} \&}]{transacao }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Operador para imprimir uma transacao. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em out} & Onde imprime a transacao. \\
+\hline
+{\em transacao} & A transacao a imprimir. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\hyperlink{_transacao_8h}{Transacao.\+h}\item 
+\hyperlink{_transacao_8cpp}{Transacao.\+cpp}\end{DoxyCompactItemize}

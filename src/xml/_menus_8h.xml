@@ -1,0 +1,382 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="_menus_8h" kind="file" language="C++">
+    <compoundname>Menus.h</compoundname>
+    <includes local="no">iostream</includes>
+    <includes local="no">fstream</includes>
+    <includes local="no">string</includes>
+    <includes refid="_utils_8h" local="yes">utils.h</includes>
+    <includes refid="_bolsa_8h" local="yes">Bolsa.h</includes>
+    <includes refid="_excecoes_8h" local="yes">Excecoes.h</includes>
+    <includedby refid="main_8cpp" local="yes">main.cpp</includedby>
+    <includedby refid="_menus_8cpp" local="yes">Menus.cpp</includedby>
+    <incdepgraph>
+      <node id="161">
+        <label>iomanip</label>
+      </node>
+      <node id="166">
+        <label>OrdemCompra.h</label>
+        <link refid="_ordem_compra_8h"/>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="157">
+        <label>windows.h</label>
+      </node>
+      <node id="168">
+        <label>insertionSort.h</label>
+        <link refid="insertion_sort_8h"/>
+        <childnode refid="158" relation="include">
+        </childnode>
+      </node>
+      <node id="169">
+        <label>Excecoes.h</label>
+        <link refid="_excecoes_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+      </node>
+      <node id="159">
+        <label>Data.h</label>
+        <link refid="_data_8h"/>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="160" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+      <node id="155">
+        <label>string</label>
+      </node>
+      <node id="154">
+        <label>fstream</label>
+      </node>
+      <node id="163">
+        <label>OrdemVenda.h</label>
+        <link refid="_ordem_venda_8h"/>
+        <childnode refid="164" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+      </node>
+      <node id="162">
+        <label>Bolsa.h</label>
+        <link refid="_bolsa_8h"/>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+        <childnode refid="163" relation="include">
+        </childnode>
+        <childnode refid="166" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="167" relation="include">
+        </childnode>
+        <childnode refid="168" relation="include">
+        </childnode>
+      </node>
+      <node id="152">
+        <label>Menus.h</label>
+        <link refid="_menus_8h"/>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="162" relation="include">
+        </childnode>
+        <childnode refid="169" relation="include">
+        </childnode>
+      </node>
+      <node id="165">
+        <label>Cliente.h</label>
+        <link refid="_cliente_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+      </node>
+      <node id="158">
+        <label>vector</label>
+      </node>
+      <node id="156">
+        <label>utils.h</label>
+        <link refid="_utils_8h"/>
+        <childnode refid="157" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="154" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="158" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="164">
+        <label>Ordem.h</label>
+        <link refid="_ordem_8h"/>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="153" relation="include">
+        </childnode>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+      </node>
+      <node id="160">
+        <label>sstream</label>
+      </node>
+      <node id="153">
+        <label>iostream</label>
+      </node>
+      <node id="167">
+        <label>Transacao.h</label>
+        <link refid="_transacao_8h"/>
+        <childnode refid="165" relation="include">
+        </childnode>
+        <childnode refid="159" relation="include">
+        </childnode>
+        <childnode refid="156" relation="include">
+        </childnode>
+        <childnode refid="155" relation="include">
+        </childnode>
+        <childnode refid="161" relation="include">
+        </childnode>
+      </node>
+    </incdepgraph>
+    <invincdepgraph>
+      <node id="170">
+        <label>Menus.h</label>
+        <link refid="_menus_8h"/>
+        <childnode refid="171" relation="include">
+        </childnode>
+        <childnode refid="172" relation="include">
+        </childnode>
+      </node>
+      <node id="171">
+        <label>main.cpp</label>
+        <link refid="main_8cpp"/>
+      </node>
+      <node id="172">
+        <label>Menus.cpp</label>
+        <link refid="_menus_8cpp"/>
+      </node>
+    </invincdepgraph>
+      <sectiondef kind="func">
+      <memberdef kind="function" id="_menus_8h_1a1ea89981ed52e2e57eca0d22a00817f2" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int verfica_fich</definition>
+        <argsstring>(string &amp;fich_veri, string tipo_fich)</argsstring>
+        <name>verfica_fich</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>fich_veri</declname>
+        </param>
+        <param>
+          <type>string</type>
+          <declname>tipo_fich</declname>
+        </param>
+        <briefdescription>
+<para>Verfica se fich_veri existe e se e valido. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>fich_veri</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Ficheiro a verificar. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>tipo_fich</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>Cabecalho valido do ficheiro.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>1 se nao for valido ou der erro e 0 se o ficheiro for valido. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menus.h" line="34" column="1" bodyfile="Menus.cpp" bodystart="11" bodyend="60"/>
+      </memberdef>
+      <memberdef kind="function" id="_menus_8h_1a978c7557eca55fb477d0e41bf13b2da9" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>int</type>
+        <definition>int infoInicial</definition>
+        <argsstring>(string &amp;fichClientes, string &amp;fichTransacoes, string &amp;fichOrdensVenda, string &amp;fichOrdensCompra)</argsstring>
+        <name>infoInicial</name>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichClientes</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichTransacoes</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichOrdensVenda</declname>
+        </param>
+        <param>
+          <type>string &amp;</type>
+          <declname>fichOrdensCompra</declname>
+        </param>
+        <briefdescription>
+<para>Information inicial. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">fichClientes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fich clientes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">fichTransacoes</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fich transacoes. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">fichOrdensVenda</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fich ordens venda. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername direction="inout">fichOrdensCompra</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fich ordens compra.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>An int. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menus.h" line="49" column="1" bodyfile="Menus.cpp" bodystart="63" bodyend="82"/>
+      </memberdef>
+      <memberdef kind="function" id="_menus_8h_1a128e37d4671a56ab0fcd512eb2454f64" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void opcoesIniciais</definition>
+        <argsstring>(Bolsa &amp;bolsa_de_valores)</argsstring>
+        <name>opcoesIniciais</name>
+        <param>
+          <type><ref refid="class_bolsa" kindref="compound">Bolsa</ref> &amp;</type>
+          <declname>bolsa_de_valores</declname>
+        </param>
+        <briefdescription>
+<para>Opcoes iniciais. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">bolsa_de_valores</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bolsa de valores. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menus.h" line="59" column="1" bodyfile="Menus.cpp" bodystart="112" bodyend="134"/>
+      </memberdef>
+      <memberdef kind="function" id="_menus_8h_1af1397c4e7e9d57be0c3bac54ff27188e" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>void</type>
+        <definition>void menuTransacoes</definition>
+        <argsstring>(Bolsa &amp;bolsa_de_valores)</argsstring>
+        <name>menuTransacoes</name>
+        <param>
+          <type><ref refid="class_bolsa" kindref="compound">Bolsa</ref> &amp;</type>
+          <declname>bolsa_de_valores</declname>
+        </param>
+        <briefdescription>
+<para>Menu transacoes. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">bolsa_de_valores</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The bolsa de valores. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Menus.h" line="69" column="1" bodyfile="Menus.cpp" bodystart="136" bodyend="158"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <programlisting>
+<codeline lineno="1"><highlight class="comment">/*</highlight></codeline>
+<codeline lineno="2"><highlight class="comment">*<sp/>Excecoes.h</highlight></codeline>
+<codeline lineno="3"><highlight class="comment">*</highlight></codeline>
+<codeline lineno="4"><highlight class="comment">*<sp/><sp/>Created<sp/>on:<sp/>17/10/2016</highlight></codeline>
+<codeline lineno="5"><highlight class="comment">*<sp/><sp/><sp/><sp/><sp/><sp/>Author:<sp/>Gil<sp/>Teixeira<sp/>&amp;<sp/>Paulo<sp/>Correia</highlight></codeline>
+<codeline lineno="6"><highlight class="comment">*/</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="7"><highlight class="normal"></highlight></codeline>
+<codeline lineno="8"><highlight class="normal"></highlight><highlight class="preprocessor">#ifndef<sp/>SRC_MENUS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="9"><highlight class="normal"></highlight><highlight class="preprocessor">#define<sp/>SRC_MENUS_H_</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="10"><highlight class="normal"></highlight></codeline>
+<codeline lineno="11"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;iostream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="12"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;fstream&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="13"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&lt;string&gt;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="14"><highlight class="normal"></highlight></codeline>
+<codeline lineno="15"><highlight class="normal"></highlight></codeline>
+<codeline lineno="16"><highlight class="normal"></highlight></codeline>
+<codeline lineno="17"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_utils_8h" kindref="compound">utils.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="18"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_bolsa_8h" kindref="compound">Bolsa.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="19"><highlight class="normal"></highlight><highlight class="preprocessor">#include<sp/>&quot;<ref refid="_excecoes_8h" kindref="compound">Excecoes.h</ref>&quot;</highlight><highlight class="normal"></highlight></codeline>
+<codeline lineno="20"><highlight class="normal"></highlight></codeline>
+<codeline lineno="21"><highlight class="normal"></highlight><highlight class="keyword">using<sp/>namespace<sp/></highlight><highlight class="normal"><ref refid="namespacestd" kindref="compound">std</ref>;</highlight></codeline>
+<codeline lineno="22"><highlight class="normal"></highlight></codeline>
+<codeline lineno="34"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_menus_8h_1a1ea89981ed52e2e57eca0d22a00817f2" kindref="member">verfica_fich</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/>fich_veri,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>tipo_fich);</highlight></codeline>
+<codeline lineno="35"><highlight class="normal"></highlight></codeline>
+<codeline lineno="49"><highlight class="keywordtype">int</highlight><highlight class="normal"><sp/><ref refid="_menus_8h_1a978c7557eca55fb477d0e41bf13b2da9" kindref="member">infoInicial</ref>(</highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="main_8cpp_1a1335b18f135ed58c716b3ddcecdc8cce" kindref="member">fichClientes</ref>,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="main_8cpp_1a66ff7fedd13a1b40664042a086ca0f27" kindref="member">fichTransacoes</ref>,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="main_8cpp_1ad22902af7efe6d185550055b7caa5cbb" kindref="member">fichOrdensVenda</ref>,<sp/></highlight><highlight class="keywordtype">string</highlight><highlight class="normal"><sp/>&amp;<sp/><ref refid="main_8cpp_1a06ef2704898a1a2529cd2d724426f9c0" kindref="member">fichOrdensCompra</ref>);</highlight></codeline>
+<codeline lineno="50"><highlight class="normal"></highlight></codeline>
+<codeline lineno="59"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_menus_8h_1a128e37d4671a56ab0fcd512eb2454f64" kindref="member">opcoesIniciais</ref>(<ref refid="class_bolsa" kindref="compound">Bolsa</ref><sp/>&amp;<sp/>bolsa_de_valores);</highlight></codeline>
+<codeline lineno="60"><highlight class="normal"></highlight></codeline>
+<codeline lineno="69"><highlight class="keywordtype">void</highlight><highlight class="normal"><sp/><ref refid="_menus_8h_1af1397c4e7e9d57be0c3bac54ff27188e" kindref="member">menuTransacoes</ref>(<ref refid="class_bolsa" kindref="compound">Bolsa</ref><sp/>&amp;<sp/>bolsa_de_valores);</highlight></codeline>
+<codeline lineno="70"><highlight class="normal"></highlight></codeline>
+<codeline lineno="71"><highlight class="normal"></highlight></codeline>
+<codeline lineno="72"><highlight class="normal"></highlight><highlight class="preprocessor">#endif<sp/></highlight><highlight class="comment">/*<sp/>SRC_MENUS_H_<sp/>*/</highlight><highlight class="preprocessor"></highlight></codeline>
+    </programlisting>
+    <location file="Menus.h"/>
+  </compounddef>
+</doxygen>

@@ -1,0 +1,98 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<doxygen xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="compound.xsd" version="1.8.12">
+  <compounddef id="class_ficheiro_invalido" kind="class" language="C++" prot="public">
+    <compoundname>FicheiroInvalido</compoundname>
+    <includes refid="_excecoes_8h" local="no">Excecoes.h</includes>
+      <sectiondef kind="private-attrib">
+      <memberdef kind="variable" id="class_ficheiro_invalido_1a83ff5cab53c94fea25e65e701a5140e5" prot="private" static="no" mutable="no">
+        <type>string</type>
+        <definition>string FicheiroInvalido::tipo_fich</definition>
+        <argsstring></argsstring>
+        <name>tipo_fich</name>
+        <briefdescription>
+<para>The tipo fich. </para>        </briefdescription>
+        <detaileddescription>
+        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Excecoes.h" line="65" column="1" bodyfile="Excecoes.h" bodystart="65" bodyend="-1"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="public-func">
+      <memberdef kind="function" id="class_ficheiro_invalido_1a000f42e4f32d27943000605907240ee3" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type></type>
+        <definition>FicheiroInvalido::FicheiroInvalido</definition>
+        <argsstring>(string tipo_fich)</argsstring>
+        <name>FicheiroInvalido</name>
+        <param>
+          <type>string</type>
+          <declname>tipo_fich</declname>
+        </param>
+        <briefdescription>
+<para>Constructor. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername>tipo_fich</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The tipo fich. </para></parameterdescription>
+</parameteritem>
+</parameterlist>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Excecoes.h" line="77" column="1" bodyfile="Excecoes.cpp" bodystart="23" bodyend="25"/>
+      </memberdef>
+      </sectiondef>
+      <sectiondef kind="friend">
+      <memberdef kind="friend" id="class_ficheiro_invalido_1a150983c019491c5ea124515a0d9845bd" prot="public" static="no" const="no" explicit="no" inline="no" virt="non-virtual">
+        <type>friend ostream &amp;</type>
+        <definition>ostream &amp; operator&lt;&lt;</definition>
+        <argsstring>(ostream &amp;out, const FicheiroInvalido &amp;fich_inva)</argsstring>
+        <name>operator&lt;&lt;</name>
+        <param>
+          <type>ostream &amp;</type>
+          <declname>out</declname>
+        </param>
+        <param>
+          <type>const <ref refid="class_ficheiro_invalido" kindref="compound">FicheiroInvalido</ref> &amp;</type>
+          <declname>fich_inva</declname>
+        </param>
+        <briefdescription>
+<para>Stream insertion operator. </para>        </briefdescription>
+        <detaileddescription>
+<para><parameterlist kind="param"><parameteritem>
+<parameternamelist>
+<parametername direction="inout">out</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The out. </para></parameterdescription>
+</parameteritem>
+<parameteritem>
+<parameternamelist>
+<parametername>fich_inva</parametername>
+</parameternamelist>
+<parameterdescription>
+<para>The fich inva.</para></parameterdescription>
+</parameteritem>
+</parameterlist>
+<simplesect kind="return"><para>The shifted result. </para></simplesect>
+</para>        </detaileddescription>
+        <inbodydescription>
+        </inbodydescription>
+        <location file="Excecoes.h" line="90" column="1" bodyfile="Excecoes.cpp" bodystart="28" bodyend="32"/>
+      </memberdef>
+      </sectiondef>
+    <briefdescription>
+<para>A ficheiro invalido. </para>    </briefdescription>
+    <detaileddescription>
+    </detaileddescription>
+    <location file="Excecoes.h" line="62" column="1" bodyfile="Excecoes.h" bodystart="62" bodyend="91"/>
+    <listofallmembers>
+      <member refid="class_ficheiro_invalido_1a000f42e4f32d27943000605907240ee3" prot="public" virt="non-virtual"><scope>FicheiroInvalido</scope><name>FicheiroInvalido</name></member>
+      <member refid="class_ficheiro_invalido_1a150983c019491c5ea124515a0d9845bd" prot="public" virt="non-virtual"><scope>FicheiroInvalido</scope><name>operator&lt;&lt;</name></member>
+      <member refid="class_ficheiro_invalido_1a83ff5cab53c94fea25e65e701a5140e5" prot="private" virt="non-virtual"><scope>FicheiroInvalido</scope><name>tipo_fich</name></member>
+    </listofallmembers>
+  </compounddef>
+</doxygen>
