@@ -44,7 +44,7 @@ long le_num()
 
 	getline(cin, input);
 	stringstream ss(input);
-
+	
 	while (!(ss >> num  && ss.eof())) {
 		cout << TAB << "Input invalido" << endl;
 		cout << TAB << "Introduza um numero valido: ";

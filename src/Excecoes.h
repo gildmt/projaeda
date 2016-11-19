@@ -9,6 +9,7 @@
 #define SRC_EXCECOES_H_
 
 #include <string>
+#include "Utils.h"
 
 using namespace std;
 

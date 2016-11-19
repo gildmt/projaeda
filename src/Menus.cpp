@@ -14,7 +14,7 @@ int verfica_fich(string & fich_veri, string tipo_fich){
 
 	//Verificar ficheiro
 
-	cout << "\nIntroduza o nome do ficheiro de " << tipo_fich << "(ou control+z para sair): ";
+	cout << endl << TAB << "Introduza o nome do ficheiro de " << tipo_fich << "(ou control+z para sair): ";
 
 
 
@@ -38,7 +38,7 @@ int verfica_fich(string & fich_veri, string tipo_fich){
 				}
 				else {
 					ficheiro.open(fich_veri, fstream::out);
-					ficheiro << tipo_fich << " : 0";
+					ficheiro << tipo_fich << ": 0";
 				}
 				ficheiro.close();
 				break;
@@ -47,7 +47,7 @@ int verfica_fich(string & fich_veri, string tipo_fich){
 		}
 		catch (FicheiroInexistente fich_inex){
 			ficheiro.open(fich_veri, fstream::out);
-			ficheiro << tipo_fich << " : 0";
+			ficheiro << tipo_fich << ": 0";
 			ficheiro.close();
 			cout << fich_inex;
 			break;
@@ -66,13 +66,13 @@ int infoInicial(string & fichClientes, string & fichTransacoes, string & fichOrd
 	string tipo_fich;
 	
 
-	if (verfica_fich(fichClientes, "Clientes "))
+	if (verfica_fich(fichClientes, "Clientes"))
 		return 1;
-	if (verfica_fich(fichTransacoes, "Transacoes "))
+	if (verfica_fich(fichTransacoes, "Transacoes"))
 		return 1;
-	if (verfica_fich(fichOrdensVenda, "Ordens de Venda "))
+	if (verfica_fich(fichOrdensVenda, "Ordens de Venda"))
 		return 1;
-	if (verfica_fich(fichOrdensCompra, "Ordens de Compra "))
+	if (verfica_fich(fichOrdensCompra, "Ordens de Compra"))
 		return 1;
 	
 	espera_input();
@@ -99,11 +99,14 @@ unsigned short int menuInicial(){
 	cout << TAB << "5 - Consultar Ordens de compra." << endl;
 	cout << TAB << "6 - Consultar Ordens de venda." << endl;
 	cout << TAB << "7 - Consultar Lista de Clientes." << endl;
-	cout << TAB << "8 - Sair do programa" << endl << endl;
+	cout << TAB << "8 - Remover Ordem de Compra." << endl;
+	cout << TAB << "9 - Remover Ordem de Venda." << endl;
+	cout << TAB << "10 - Remover Cliente" << endl;
+	cout << TAB << "0 - Sair do programa" << endl << endl;
 	cout << TAB << "Qual a sua opcao: ";
-	opcao = leInteiro(1, 8);
+	opcao = leInteiro(0, 10);
 
-	if (opcao == 8)
+	if (opcao == 0)
 		return 0;
 
 	return opcao;
@@ -129,6 +132,11 @@ void opcoesIniciais(Bolsa & bolsa_de_valores){
 			break;
 		case 7: bolsa_de_valores.listar_clientes();
 			break;
+		case 8:  bolsa_de_valores.rem_ordem_compra();
+			break;
+		case 9: bolsa_de_valores.rem_ordem_venda();
+			break;
+		case 10: bolsa_de_valores.rem_cli();
 	}
 
 }
@@ -140,11 +148,12 @@ void menuTransacoes(Bolsa & bolsa_de_valores){
 	cout << TAB << "1 - Consultar Transacoes efetuadas por clientes." << endl;
 	cout << TAB << "2 - Consultar Transacoes efetuadas por titulo." << endl;
 	cout << TAB << "3 - Consultar Transacoes efetuadas por data." << endl;
-	cout << TAB << "4 - Voltar ao menu inicial." << endl << endl;
+	cout << TAB << "4 - Consultar todas as Transacoes." << endl;
+	cout << TAB << "5 - Voltar ao menu inicial." << endl << endl;
 	cout << TAB << "Qual a sua opcao: ";
-	opcao = leInteiro(1, 4);
+	opcao = leInteiro(1, 5);
 
-	if (opcao == 4)
+	if (opcao == 5)
 		return;
 	
 	switch (opcao) {
@@ -153,6 +162,8 @@ void menuTransacoes(Bolsa & bolsa_de_valores){
 	case 2:  bolsa_de_valores.listar_transacoes_titulo();
 		break;
 	case 3: bolsa_de_valores.listar_transacoes_intervalo_de_tempo();
+		break;
+	case 4: bolsa_de_valores.listar_transacoes();
 		break;
 	}
 }

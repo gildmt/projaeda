@@ -136,6 +136,42 @@ public:
 
 	void ad_cli();
 
+	////////////////////////////////
+	/**
+	* @fn	void Bolsa::rem_ordem_compra();
+	*
+	* @brief	Remove uma ordem de compra ao vector de ordens de compra, com parametros definidos pelo utilizador.
+	*/
+
+	void rem_ordem_compra();
+
+	/**
+	* @fn	void Bolsa::rem_ordem_venda();
+	*
+	* @brief	Remove uma ordem de venda do vector de ordens de venda, com parametros definidos pelo utilizador.
+	*/
+
+	void rem_ordem_venda();
+
+	/**
+	* @fn	void Bolsa::rem_cli();
+	*
+	* @brief	Remove um cliente do vector de clientes, com parametros definidos pelo utilizador.
+	*/
+
+	void rem_cli();
+	///sdsddddddddddddssadsaads
+
+	/**
+	* @fn	void Bolsa::listar_transacoes();
+	*
+	* @brief	Lista as todas as transacoes.
+	*/
+
+	void listar_transacoes();
+
+
+
 	/**
 	 * @fn	void Bolsa::listar_transacoes_cli();
 	 *
